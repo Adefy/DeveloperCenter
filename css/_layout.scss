@@ -1,0 +1,302 @@
+// outer grid: aligns content and sidebar with no gutter
+
+$max-width: 1230px;
+
+$total_columns:   12;     //        //
+$total_width:   100%;     // px|100%    // px = fixed, 100% = fluid
+$gutter_width:    0%;  // px|%     // px = fixed, % = fluid
+$container_margin:  auto; // auto|px|%  //
+
+.main {
+  @include clearfix();
+  @include container();
+  max-width: $max-width;
+
+  .container {
+  	@include column(9);
+  	@include push(0);
+  }
+
+  .container.no-sidebar {
+    @include column(12);
+    @include push(0);
+  }
+
+  .sidebar {
+  	@include column(3);
+  	@include push(9);
+  	background-color: #eceff0;
+  }
+}
+
+.sidebar {
+  padding: 2rem;
+
+  ul { 
+    li {
+      display: block;
+      color: #414141;
+      background-color: white;
+      position: relative;
+
+      &:first-of-type { border-radius: 3px 3px 0 0; }
+
+      &.active { color: #33b5e5; }
+      &.active a::after {
+        content: "●";
+        font-size: 1rem;
+        position: absolute;
+        right: .85rem;
+        top: 50%;
+        margin-top: -.5rem;
+        line-height: 1;
+      }
+      
+      a {
+        position: relative;
+        color: inherit;
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(226,229,232,.8);
+      }
+    }
+    // nested list
+    ul li {
+      font-size: .875rem;
+      background-color: #f9fafa;
+      color: #858585;
+      a {
+        padding: .85rem 2rem;
+        border-bottom: 1px solid rgba(237,239,240,.8);
+      }
+
+      a::after { content: "○" !important; }
+    }
+  }
+
+}
+
+// article with sidebar grid helpers
+
+$total_columns:   6;     //        //
+$total_width:   100%;     // px|100%    // px = fixed, 100% = fluid
+$gutter_width:  3.2%;  // px|%     // px = fixed, % = fluid
+$container_margin:  0%; // auto|px|%  //
+
+.content article.with-sidebar {
+  @include generate_helper_classes(); // we use these for the form
+}
+
+// content area grid: no sidebar 2.45% = 30px gutter
+$total_columns:   12;     //        //
+$total_width:   100%;     // px|100%    // px = fixed, 100% = fluid
+$gutter_width:  2.45%;  // px|%     // px = fixed, % = fluid
+$container_margin:  0; // auto|px|%  //
+
+.container.no-sidebar .content {
+  @include generate_helper_classes();
+}
+
+// content area grid: on sidebar pages 3.2% = 30px gutter
+$total_columns:   9;     //        //
+$total_width:   100%;     // px|100%    // px = fixed, 100% = fluid
+$gutter_width:  3.2%;  // px|%     // px = fixed, % = fluid
+$container_margin:  3.2%; // auto|px|%  //
+
+.content {
+	@include container();
+  //@include clearfix();
+  // include clearfix doesn't work here, because overflow hidden would break <hr>
+  &:after {
+    content:"";
+    clear:both;
+    display:block;
+  }
+	padding: 60px 0;
+
+	.columns {
+		@include clearfix();
+		div {	@include column(3) }
+    @include generate_grid_positions(div, 3);
+
+    div {  // enable hyphenation where supported
+    	-moz-hyphens: auto;
+    	-webkit-hyphens: auto;
+    	-ms-hyphens: auto;
+    	hyphens: auto;
+
+			button { width: 100% }
+    }
+	}
+
+	hr { 
+		margin-left: -3.2%;
+		margin-right: -3.2%;
+	}
+
+	.spread {
+		-moz-column-count: 3;
+		-webkit-column-count: 3;
+		column-count: 3;
+
+		-moz-column-gap: 30px;
+		-webkit-column-gap: 30px;
+		column-gap: 30px;
+
+		button { width: 100% }
+	}
+
+	ul.tabs {
+    margin-bottom: 1.5rem;
+
+		li { 
+			display: inline-block;
+			color: #414141;
+			margin-right: 20px;
+			&.active { color: #33b5e5 }
+			a { color: inherit }
+		}
+	}
+
+  article {
+    @include column(9);
+    clear: both;
+  }
+
+	article.with-sidebar {
+		@include column(6);
+
+		section {
+			position: relative;
+		}
+
+		blockquote { // aligns to top of section
+			@include column(4);
+
+			padding: 20px;
+			background-color: #f7f8fa;
+			color: rgba(133,133,133,.6);
+			font-size: .875rem;
+			margin-left: 5%;
+			left: 100%;
+			top: 0;
+			float: left;
+			//margin-right: -100%;
+			width: 48.2%;
+			position: absolute;
+			//right: 100%;
+		}
+	}
+}
+
+// two columns: custom inline-block code because centering floats is impossible
+
+.twoway {
+  div {
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+// Adefy demos
+
+.demos {
+  @include clearfix();
+  div { @include column(3); }
+  @include generate_grid_positions(div, 3);
+
+  div { vertical-align: top }
+  img.preview {
+    display: block;
+    margin-bottom: 1.125rem;
+  }
+
+  a { 
+    display: block;
+    margin-bottom: .5rem;
+  }
+}
+
+.dropdown {
+  position: relative;
+  text-align: right;
+  button {
+    display: inline-block;
+    background-color: #c0c8ce;
+    border-radius: 2px;
+    border: none;
+    padding: .5rem 1rem;
+
+    &:hover {
+      background-color: #33b5e5;
+      color: #fff;
+    }
+  }
+
+  ul { display: none }
+  &:hover ul { display: inline-block }
+
+  ul {
+    position: absolute;
+    z-index: 9;
+    top: 100%;
+    right: 0;
+    min-width: 175px;
+    border-radius: 4px;
+    box-shadow: 0 1px 6px rgba(0,0,0,.3);
+    text-align: left;
+    list-style-type: none;
+
+    &:after {
+      bottom: 100%;
+      right: 2rem;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+
+      border-color: transparent;
+      border-bottom-color: #fff;
+      border-width: 10px;
+      margin-left: -10px;
+    }
+
+    li {
+      font-size: .875rem;
+      padding: .75rem 1rem;
+      background-color: #fff;
+      border-bottom: 1px solid #dfdfdf;
+      &:first-of-type { border-radius: 4px 4px 0 0 }
+      &:last-of-type  { border-radius: 0 0 4px 4px }
+      a { color: inherit }
+    }
+  }
+}
+
+// SDK downloads
+$total_columns:   8;     //        //
+$total_width:   100%;     // px|100%    // px = fixed, 100% = fluid
+$gutter_width:  3.2%;  // px|%     // px = fixed, % = fluid
+$container_margin: 0; // auto|px|%  //
+.versions, .related {
+  @include clearfix();
+  
+  & > div { @include column(4) }
+
+  @include generate_grid_positions(div, 4);
+  //div:nth-child(2n+1) { @include push(0) }
+  //div:nth-child(2n) { @include push(5) }
+
+  .logo {
+    .img {@include column(4); text-align: center}
+    .link {@include column(4); line-height: 84px}
+  }
+}

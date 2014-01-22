@@ -1,0 +1,58 @@
+h1 Tech demos
+h3 Once you've done that, Tinypass takes over; monitoring access, processing payments, and reporting statistics and revenue to your Tinypass publisher account.
+
+hr
+
+.row
+  .col3
+    ul.listing
+      li: a(href="#") Download demo!
+      li: a(href="#") Download demo!
+      li: a(href="#") Download demo!
+
+  .col9.push3
+    p Gist is a paste. A snippet of text. Not unrelated to GitHub Gists. To set some expectations let's provide following functionality in our API: List Gists, Retrieve a Single Gist, Create a Gist, Edit a Gist, Star a Gist, Unstar a Gist, Check if a Gist is starred and Delete a Gist.
+
+    p Returns the charge object if the update succeeded. This call will return an error if update parameters are invalid.
+
+    p In API Blueprint an action should always include at least one response representing the HTTP response message sent back in response to a HTTP request. The response should always bear a status code and possibly an additional payload. Here we have defined the most common response "200" indicating the request has succeeded.
+
+    p All you really need to write a blueprint is a text editor. A Markdown editor is even better. Anything you like. From Vi to Byword. Online editors are great too! You can even directly edit a blueprint on GitHub in the repository your service is living!
+
+    p If you are completely new to Markdown it is now the best time to learn about it. Just head over to Markdown Tutorial and enjoy the ride. Just don't forget to come back we have some cool stuff too!
+
+    p Should you just need to refresh Markdown syntax you can always check the one and only Gruber's Original documentation. When access is granted, the publisher's server will show the content without interference from Tinypass. In this scenario, your website will look and feel as it always has.
+
+    p When access is DENIED, you must redirect the user to a custom, access denied landing page. This page should contain at least the following information The most basic level of access control grants access to a resource for an unlimited period of time. In this case, once a user purchases a resource they have access to the resource forever.
+
+.row
+  .col6
+    h3 Code preview
+  .col6.push6
+    .dropdown
+      button Change version
+      ul
+        li: a(href="#") White version code
+        li: a(href="#") Dark version code
+.row
+  .col12
+    #editor  
+      | function foo(items) {
+      |   var x = "All this is syntax highlighted";
+      |   return x;
+      | }
+
+button.large.center Download demo
+
+style.
+  #editor {
+    position: relative;
+    width: 100%;
+    height: 440px;
+    border: 1px solid #e8e8e8;
+  }
+
+script.
+  var editor = ace.edit("editor");
+  editor.setTheme("ace/theme/tomorrow");
+  editor.getSession().setMode("ace/mode/javascript");

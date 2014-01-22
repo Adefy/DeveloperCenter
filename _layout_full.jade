@@ -1,0 +1,23 @@
+!= partial("_head")
+body
+  != partial("_header")
+  .main
+    .container.no-sidebar: .content
+      != yield
+    .sidebar(style="display: none")
+      ul
+        li: a(href="#") Class listing
+        li.active
+          a(href="#") Tutorials
+          ul
+            li: a(href="#") Accounts
+            li: a(href="#") Account
+            li: a(href="#") Engines
+            li: a(href="#") Group Positions
+        li: a(href="#") Tech demos
+        li: a(href="#") API
+        li: a(href="#") Library references
+        li: a(href="#") Design documents
+        li: a(href="#") Contact form
+
+  != partial("_footer")

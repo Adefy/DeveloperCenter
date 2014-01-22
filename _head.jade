@@ -1,0 +1,54 @@
+!!!
+html(lang="en")
+  head
+  meta(charset="utf-8")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+
+  title Adefy
+
+  meta(name="description", content="Adefy delivers native, non-intrusive loadscreen ads optimized for the mobile experience.")
+  meta(name="author", content="Spectrum IT")
+  meta(name="keywords", content="mobile advertising, ads, innovation, startups, vienna, austria")
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+
+  meta(property="og:title", content="Adefy")
+  meta(property="og:type", content="website")
+  meta(property="og:image", content="https://www.adefy.com/img/adefy_logo_b_square.png")
+  meta(property="og:url", content="https://www.adefy.com")
+  meta(property="og:description", content="Adefy delivers native, non-intrusive loadscreen ads optimized for the mobile experience.")
+
+  link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+
+  link(rel="stylesheet", href='//fonts.googleapis.com/css?family=Gudea:400,700,400italic|Oleo+Script')
+
+  link(rel="stylesheet", href="/css/reset.css")
+  link(rel="stylesheet", href="/css/styles.css")
+
+  script(src="/vendor/ace/ace.js")
+  script(src="http://code.jquery.com/jquery-2.0.3.min.js")
+  script(src="/vendor/jquery.pjax.js")
+
+  | <!--[if lt IE 9]>
+  |   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  | <![endif]-->
+
+  script.
+    // Handle previous/next navigation
+    $(function() {
+      // Requires jQuery 1.7+ to utilize the new "on" event attachment
+      $("body").on("click", "a", function (event) {
+        $.pjax({
+          "url": $(this).attr("href"),
+          "fragment": ".main",
+          "container": ".main",
+          "complete": function(data) {
+            // Update the className on the BODY tag
+            //var bodyClass = data.responseText && data.responseText.match(/<body[^>]+class\s*=\s*['"]([^'"]+)/);
+            //if (bodyClass) {
+            //  $("body").attr("class", bodyClass[1]);
+            //}
+          }
+        });
+        event.preventDefault();
+      });
+    });

@@ -1,0 +1,140 @@
+
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+.hide { display: none !important; }
+
+body {
+  font-family: Gudea;
+  color: #858585;
+
+  line-height: 1.35;
+  // max-width: $max-width;
+  // margin: 0 auto;
+}
+
+a:hover, button:hover {
+  cursor: hand;
+  cursor: pointer;
+}
+
+a {
+  color: #33b5e5;
+  text-decoration: none;
+
+  &:hover { text-decoration: underline }
+  &.button:hover { text-decoration: none }
+}
+
+h1,h2,h3,
+h4,h5,h6 {
+  line-height: 1.2;
+  text-rendering: optimizeLegibility;
+  margin-bottom: 1.875rem;
+  color: #414141;
+}
+h1 { font-size: 2.625rem; }
+h2 { font-size: 2.250rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.125rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: .875rem; }
+
+.blue { color: #33b5e5; }
+
+p {
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+button {
+  display: block;
+  background-color: #33b5e5;
+  font-size: .875em;
+  color: #fff;
+
+  border: 2px solid #33b5e5;
+  padding: 5px 40px;
+  border-radius: 15px;
+
+  &:hover {
+    background-color: transparent;
+    color: #33b5e5;
+  }
+
+  &.large {
+    border-radius: 30px;
+    font-size: 1.5rem;
+    padding: 10px 40px;
+  }
+
+  &.center {
+    margin: .5rem auto;
+  }
+}
+
+hr {
+  height: 1px;
+  background-color: #e8e8e8;
+  margin: 2rem 0;
+  border: none;
+}
+
+ul { list-style-type: disc; }
+ul.bulletless { list-style-type: none }
+ol { list-style-type: decimal; }
+
+ul, ol {
+  &.listing {
+    vertical-align: top;
+    list-style-position: inside;
+
+    li {
+      padding: 15px;
+      border-bottom: 1px solid #e8e8e8;
+       // fix mid element multi column breaks
+      -webkit-column-break-inside: avoid;
+    }
+
+    p { margin: .5em 0 0 }
+  }
+}
+
+ol.listing li {
+  padding: 15px 0;
+  color: #33b5e5;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  font-family: Gudea;
+  font-size: 1rem;
+  padding: 1rem;
+
+  border: 1px solid #d1d3d4;
+  border-radius: 2px;
+
+  width: 100%;
+
+  &:focus {
+    outline: none;
+    border-color: #33b5e5;
+  }
+}
+
+textarea {
+  min-height: 209px;
+}
+
+label {
+  display: block;
+  color: #414141;
+  margin: .5rem 0;
+}
+
+::-webkit-input-placeholder { color: rgba(133,133,133,.4); }
+::-moz-placeholder          { color: rgba(133,133,133,.4); }
+:-ms-input-placeholder      { color: rgba(133,133,133,.4); }
+
+form button {
+  width: 100%;
+  padding: 2px 6px 3px;
+}
