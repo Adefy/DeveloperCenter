@@ -25,14 +25,21 @@ $container_margin:  auto; // auto|px|%  //
   .sidebar {
   	@include column(3);
   	@include push(9);
-  	background-color: #eceff0;
+  	//background-color: #eceff0;
   }
 }
 
 .sidebar {
   padding: 2rem;
 
-  ul { 
+  ul {
+    border-radius: 3px 3px 0 0;
+    border: 1px solid rgba(226,229,232,.8);
+    border-bottom: none;
+    ul { // no border on second level
+      border-radius: 0;
+      border: none;
+    }
     li {
       display: block;
       color: #414141;
@@ -187,15 +194,40 @@ $container_margin:  3.2%; // auto|px|%  //
 			//right: 100%;
 		}
 	}
+
+  // media element: img + content
+  .media {
+    @include clearfix();
+    margin: 4rem 0;
+    &:last-of-type { margin-bottom: 0 }
+
+    .img { 
+      @include column(3);
+      @include push(0);
+    }
+    .inner { 
+      @include column(6);
+      @include push(3);
+    }
+
+    &.right {
+      text-align: left;
+      .img { @include push(6); }
+      .inner { @include push(0); }
+    }
+  }
 }
 
 // two columns: custom inline-block code because centering floats is impossible
 
 .twoway {
   div {
-    width: 50%;
+    width: 46.8%;
     display: inline-block;
     vertical-align: middle;
+
+    &:nth-of-type(2n+1) { margin-right: 3.2% }
+    &:nth-of-type(2n) { margin-left: 3.2% }
 
     img {
       display: block;
@@ -225,18 +257,17 @@ $container_margin:  3.2%; // auto|px|%  //
 
 .dropdown {
   position: relative;
-  text-align: right;
+  text-align: left;
+  display: inline-block;
   button {
-    display: inline-block;
     background-color: #c0c8ce;
     border-radius: 2px;
     border: none;
+    box-shadow: inset 0 -1px rgba(0,0,0,.1);
+    margin: 0;
     padding: .5rem 1rem;
 
-    &:hover {
-      background-color: #33b5e5;
-      color: #fff;
-    }
+    &:hover { color: #fff; }
   }
 
   ul { display: none }
@@ -245,12 +276,10 @@ $container_margin:  3.2%; // auto|px|%  //
   ul {
     position: absolute;
     z-index: 9;
-    top: 100%;
     right: 0;
     min-width: 175px;
     border-radius: 4px;
     box-shadow: 0 1px 6px rgba(0,0,0,.3);
-    text-align: left;
     list-style-type: none;
 
     &:after {
@@ -270,13 +299,13 @@ $container_margin:  3.2%; // auto|px|%  //
     }
 
     li {
+      cursor: pointer;
       font-size: .875rem;
       padding: .75rem 1rem;
       background-color: #fff;
       border-bottom: 1px solid #dfdfdf;
       &:first-of-type { border-radius: 4px 4px 0 0 }
       &:last-of-type  { border-radius: 0 0 4px 4px }
-      a { color: inherit }
     }
   }
 }

@@ -2,6 +2,7 @@
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 .hide { display: none !important; }
+.right { text-align: right; }
 
 body {
   font-family: Gudea;
@@ -53,6 +54,7 @@ button {
   color: #fff;
 
   border: 2px solid #33b5e5;
+  margin: 1rem 0;
   padding: 5px 40px;
   border-radius: 15px;
 
@@ -68,7 +70,7 @@ button {
   }
 
   &.center {
-    margin: .5rem auto;
+    margin: 1rem auto;
   }
 }
 
@@ -137,4 +139,13 @@ label {
 form button {
   width: 100%;
   padding: 2px 6px 3px;
+}
+
+// Ace Editor
+#editor {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 2.5rem;
 }

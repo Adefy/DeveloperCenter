@@ -51,3 +51,18 @@ footer
       | Adefy TM by Spectrum IT Solutions GmbH 2013
 
 script(src="/js/retina-1.1.0.min.js")
+
+script.
+  var editor = ace.edit("editor");
+  editor.setTheme("ace/theme/tomorrow");
+  editor.getSession().setMode("ace/mode/javascript");
+
+  $('.editor-light').click(function(e) {
+    editor.setTheme("ace/theme/tomorrow");
+    e.preventDefault();
+  });
+
+  $('.editor-dark').click(function(e) {
+    editor.setTheme("ace/theme/tomorrow_night");
+    e.preventDefault();
+  });

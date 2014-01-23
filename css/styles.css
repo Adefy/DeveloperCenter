@@ -45,6 +45,9 @@
 .hide {
   display: none !important; }
 
+.right {
+  text-align: right; }
+
 body {
   font-family: Gudea;
   color: #858585;
@@ -100,6 +103,7 @@ button {
   font-size: .875em;
   color: #fff;
   border: 2px solid #33b5e5;
+  margin: 1rem 0;
   padding: 5px 40px;
   border-radius: 15px; }
   button:hover {
@@ -110,7 +114,7 @@ button {
     font-size: 1.5rem;
     padding: 10px 40px; }
   button.center {
-    margin: .5rem auto; }
+    margin: 1rem auto; }
 
 hr {
   height: 1px;
@@ -173,6 +177,13 @@ form button {
   width: 100%;
   padding: 2px 6px 3px; }
 
+#editor {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 2.5rem; }
+
 .main {
   overflow: hidden;
   *zoom: 1;
@@ -193,43 +204,49 @@ form button {
     float: left;
     margin-right: -100%;
     width: 25%;
-    margin-left: 75%;
-    background-color: #eceff0; }
+    margin-left: 75%; }
 
 .sidebar {
   padding: 2rem; }
-  .sidebar ul li {
-    display: block;
-    color: #414141;
-    background-color: white;
-    position: relative; }
-    .sidebar ul li:first-of-type {
-      border-radius: 3px 3px 0 0; }
-    .sidebar ul li.active {
-      color: #33b5e5; }
-    .sidebar ul li.active a::after {
-      content: "●";
-      font-size: 1rem;
-      position: absolute;
-      right: .85rem;
-      top: 50%;
-      margin-top: -.5rem;
-      line-height: 1; }
-    .sidebar ul li a {
-      position: relative;
-      color: inherit;
+  .sidebar ul {
+    border-radius: 3px 3px 0 0;
+    border: 1px solid rgba(226, 229, 232, 0.8);
+    border-bottom: none; }
+    .sidebar ul ul {
+      border-radius: 0;
+      border: none; }
+    .sidebar ul li {
       display: block;
-      padding: 1rem;
-      border-bottom: 1px solid rgba(226, 229, 232, 0.8); }
-  .sidebar ul ul li {
-    font-size: .875rem;
-    background-color: #f9fafa;
-    color: #858585; }
-    .sidebar ul ul li a {
-      padding: .85rem 2rem;
-      border-bottom: 1px solid rgba(237, 239, 240, 0.8); }
-    .sidebar ul ul li a::after {
-      content: "○" !important; }
+      color: #414141;
+      background-color: white;
+      position: relative; }
+      .sidebar ul li:first-of-type {
+        border-radius: 3px 3px 0 0; }
+      .sidebar ul li.active {
+        color: #33b5e5; }
+      .sidebar ul li.active a::after {
+        content: "●";
+        font-size: 1rem;
+        position: absolute;
+        right: .85rem;
+        top: 50%;
+        margin-top: -.5rem;
+        line-height: 1; }
+      .sidebar ul li a {
+        position: relative;
+        color: inherit;
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(226, 229, 232, 0.8); }
+    .sidebar ul ul li {
+      font-size: .875rem;
+      background-color: #f9fafa;
+      color: #858585; }
+      .sidebar ul ul li a {
+        padding: .85rem 2rem;
+        border-bottom: 1px solid rgba(237, 239, 240, 0.8); }
+      .sidebar ul ul li a::after {
+        content: "○" !important; }
 
 .content article.with-sidebar {
   /* Helper Class: Container */
@@ -446,11 +463,37 @@ form button {
       float: left;
       width: 48.2%;
       position: absolute; }
+  .content .media {
+    overflow: hidden;
+    *zoom: 1;
+    margin: 4rem 0; }
+    .content .media:last-of-type {
+      margin-bottom: 0; }
+    .content .media .img {
+      float: left;
+      margin-right: -100%;
+      width: 31.2%;
+      margin-left: 0%; }
+    .content .media .inner {
+      float: left;
+      margin-right: -100%;
+      width: 65.6%;
+      margin-left: 34.4%; }
+    .content .media.right {
+      text-align: left; }
+      .content .media.right .img {
+        margin-left: 68.8%; }
+      .content .media.right .inner {
+        margin-left: 0%; }
 
 .twoway div {
-  width: 50%;
+  width: 46.8%;
   display: inline-block;
   vertical-align: middle; }
+  .twoway div:nth-of-type(2n+1) {
+    margin-right: 3.2%; }
+  .twoway div:nth-of-type(2n) {
+    margin-left: 3.2%; }
   .twoway div img {
     display: block;
     margin: 0 auto; }
@@ -487,15 +530,16 @@ form button {
 
 .dropdown {
   position: relative;
-  text-align: right; }
+  text-align: left;
+  display: inline-block; }
   .dropdown button {
-    display: inline-block;
     background-color: #c0c8ce;
     border-radius: 2px;
     border: none;
+    box-shadow: inset 0 -1px rgba(0, 0, 0, 0.1);
+    margin: 0;
     padding: .5rem 1rem; }
     .dropdown button:hover {
-      background-color: #33b5e5;
       color: #fff; }
   .dropdown ul {
     display: none; }
@@ -504,12 +548,10 @@ form button {
   .dropdown ul {
     position: absolute;
     z-index: 9;
-    top: 100%;
     right: 0;
     min-width: 175px;
     border-radius: 4px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-    text-align: left;
     list-style-type: none; }
     .dropdown ul:after {
       bottom: 100%;
@@ -525,6 +567,7 @@ form button {
       border-width: 10px;
       margin-left: -10px; }
     .dropdown ul li {
+      cursor: pointer;
       font-size: .875rem;
       padding: .75rem 1rem;
       background-color: #fff;
@@ -533,8 +576,6 @@ form button {
         border-radius: 4px 4px 0 0; }
       .dropdown ul li:last-of-type {
         border-radius: 0 0 4px 4px; }
-      .dropdown ul li a {
-        color: inherit; }
 
 .versions, .related {
   overflow: hidden;
@@ -696,65 +737,8 @@ footer {
     margin-right: -100%;
     width: 100%; }
 
-/*
-section {
-  @include clearfix();
-  @include container();
-  max-width: $max-width;
-  div { @include column(6); }
-  @include generate_grid_positions(div, 6);
-  div {
-    margin-bottom: 0 !important;
-  }
-
-  padding: 80px 0 30px;
-  border-bottom: 1px solid #e8e8e8;
-
-  h1, h3 { color: #414141 }
-
-  h6 { margin-bottom: 20px; }
-  img {vertical-align: bottom}
-  .middle {
-    display: block;
-    margin: 0 auto 20px;
-  }
-  &.centered {
-    text-align: center;
-
-    button { margin: 10px auto 20px }
-  }
-  &.no-bottom { padding-bottom: 0; }
-}
-*/
 /* media queries */
-@media screen and (max-width: 1182px) {
-  .center, #content section {
-    padding-left: 12px;
-    padding-right: 12px; } }
 @media screen and (max-width: 400px) {
-  section {
-    width: 90%;
-    margin: 0 5%;
-    overflow: hidden;
-    *zoom: 1;
-    padding: 32px 0;
-    text-align: center; }
-    section img {
-      display: none; }
-    section div {
-      float: left;
-      margin-right: -100%;
-      width: 100%; }
-    section button, section a {
-      margin: 0 auto;
-      display: block; }
-    section div:nth-child(1n+1) {
-      margin-left: 0%;
-      margin-bottom: 2%;
-      clear: both;
-      overflow: hidden;
-      *zoom: 1; }
-
   footer ul {
     overflow: hidden;
     *zoom: 1; }
