@@ -12,10 +12,28 @@ hr
     h3 Code preview
   .col3.push3.right
     .dropdown 
-      button Change version
+      button
+        | Change theme
+        i.ss-dropdown.tiny.right
       ul
         li.editor-light Tomorrow
         li.editor-dark Tomorrow Night
+  .col2.push6.controls
+    button.rewind: i.ss-rewind
+    button.play: i.ss-play
+    button.fastforward: i.ss-fastforward
+
+  .col4.push8.right
+    .controls
+      button.rotate: i.rotate
+      button.scale: i.scale
+    .dropdown
+      button
+        | Change device
+        i.ss-dropdown.tiny.right
+      ul
+        li Nexus 4
+        li iPhone
 .row
   .col6
     #editor  
@@ -24,5 +42,11 @@ hr
       |   return x;
       | }
     ul.tabs
-      li: a(href="#") Revert code changes
-      li: a(href="#") Save code
+      li: a(href="#")
+        i.ss-replay
+        | Revert code changes
+      li: a(href="#")
+        i.ss-hdd
+        | Save code
+  .col6.push6.preview
+    img(src="/img/phone.svg" width="495")

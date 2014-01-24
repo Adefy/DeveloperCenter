@@ -23,8 +23,12 @@ hr
       | }
 
     ul.tabs
-      li: a(href="#") Revert code changes
-      li: a(href="#") Save code
+      li: a(href="#")
+        i.ss-replay
+        | Revert code changes
+      li: a(href="#")
+        i.ss-hdd
+        | Save code
 
   .col6.push6
     p To charge a credit card, you create a new charge object. If your API key is in test mode, the supplied card won't actually be charged, though everything else will occur as if in live mode. (Stripe assumes that the charge would have completed successfully).

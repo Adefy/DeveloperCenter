@@ -81,8 +81,6 @@ hr {
   border: none;
 }
 
-ul { list-style-type: disc; }
-ul.bulletless { list-style-type: none }
 ol { list-style-type: decimal; }
 
 ul, ol {
@@ -95,9 +93,25 @@ ul, ol {
       border-bottom: 1px solid #e8e8e8;
        // fix mid element multi column breaks
       -webkit-column-break-inside: avoid;
+
     }
 
     p { margin: .5em 0 0 }
+  }
+}
+
+ul.listing {
+  list-style-type: none;
+  li:before {
+    content: "•";
+    margin-right: .5rem;
+  }
+
+  li.ss-download:before { // hacky override
+    font-size: .75rem;
+    content: '';
+    margin-right: .4rem;
+    margin-left: -.2rem;
   }
 }
 
@@ -147,5 +161,46 @@ form button {
   width: 100%;
   height: 440px;
   border: 1px solid #e8e8e8;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+// icons
+i {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: .4rem;
+  &.tiny {
+    font-size: .375rem;
+  }
+  &.small {
+    font-size: .75rem;
+  }
+  &.right {
+    margin-right: 0;
+    margin-left: .4rem;
+  }
+
+  // icons
+  &.search { 
+    width: 16px;
+    height: 16px;
+    background: url("/img/Search.jpg");
+    @include image-2x("/img/Search@2x.png", 100%);
+  }
+
+  // scale
+  &.scale {
+    width: 22px;
+    height: 21px;
+    background: url("/img/icon-scale.png");
+    @include image-2x("/img/icon-scale@2x.png", 100%);
+  }
+
+  // rotate
+  &.rotate {
+    width: 22px;
+    height: 21px;
+    background: url("/img/icon-rotate.png");
+    @include image-2x("/img/icon-rotate@2x.png", 100%);
+  }
 }

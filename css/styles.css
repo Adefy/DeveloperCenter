@@ -122,12 +122,6 @@ hr {
   margin: 2rem 0;
   border: none; }
 
-ul {
-  list-style-type: disc; }
-
-ul.bulletless {
-  list-style-type: none; }
-
 ol {
   list-style-type: decimal; }
 
@@ -140,6 +134,17 @@ ul.listing, ol.listing {
     -webkit-column-break-inside: avoid; }
   ul.listing p, ol.listing p {
     margin: 0.5em 0 0; }
+
+ul.listing {
+  list-style-type: none; }
+  ul.listing li:before {
+    content: "•";
+    margin-right: .5rem; }
+  ul.listing li.ss-download:before {
+    font-size: .75rem;
+    content: '';
+    margin-right: .4rem;
+    margin-left: -.2rem; }
 
 ol.listing li {
   padding: 15px 0;
@@ -182,7 +187,43 @@ form button {
   width: 100%;
   height: 440px;
   border: 1px solid #e8e8e8;
-  margin-bottom: 2.5rem; }
+  margin-bottom: 2rem; }
+
+i {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: .4rem; }
+  i.tiny {
+    font-size: .375rem; }
+  i.small {
+    font-size: .75rem; }
+  i.right {
+    margin-right: 0;
+    margin-left: .4rem; }
+  i.search {
+    width: 16px;
+    height: 16px;
+    background: url("/img/Search.jpg"); }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+      i.search {
+        background-image: url("/img/Search@2x.png");
+        background-size: 100%, 100%; } }
+  i.scale {
+    width: 22px;
+    height: 21px;
+    background: url("/img/icon-scale.png"); }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+      i.scale {
+        background-image: url("/img/icon-scale@2x.png");
+        background-size: 100%, 100%; } }
+  i.rotate {
+    width: 22px;
+    height: 21px;
+    background: url("/img/icon-rotate.png"); }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+      i.rotate {
+        background-image: url("/img/icon-rotate@2x.png");
+        background-size: 100%, 100%; } }
 
 .main {
   overflow: hidden;
@@ -524,9 +565,15 @@ form button {
   .demos img.preview {
     display: block;
     margin-bottom: 1.125rem; }
-  .demos a {
+  .demos span.title {
+    overflow: hidden;
     display: block;
     margin-bottom: .5rem; }
+    .demos span.title a {
+      float: left; }
+    .demos span.title .platforms {
+      float: right;
+      color: #ccc; }
 
 .dropdown {
   position: relative;
@@ -605,6 +652,53 @@ form button {
     width: 48.4%;
     line-height: 84px; }
 
+.controls {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 2rem; }
+  .controls > * {
+    display: inline-block; }
+  .controls button {
+    padding: 6px 10px;
+    margin: 0 .35rem;
+    text-align: center;
+    border-radius: 50%/50%;
+    background-color: #c0c8ce;
+    border: none;
+    vertical-align: middle; }
+    .controls button:first-of-type {
+      margin-left: 0; }
+    .controls button:hover {
+      color: #fff;
+      background-color: #abb6be; }
+    .controls button.active {
+      color: #fff;
+      background-color: #33b5e5; }
+    .controls button i {
+      margin: 0;
+      vertical-align: -5px; }
+    .controls button.play i {
+      margin-left: 1px;
+      margin-right: -1px; }
+    .controls button.fastforward i {
+      margin-left: 1px;
+      margin-right: -1px; }
+    .controls button.rewind i {
+      margin-left: -1px;
+      margin-right: 1px; }
+    .controls button.rewind, .controls button.fastforward {
+      font-size: .75rem;
+      padding: 7px 11px; }
+    .controls button.rotate, .controls button.scale {
+      padding: 6px; }
+
+.preview {
+  height: 440px;
+  line-height: 440px;
+  text-align: center; }
+  .preview img {
+    vertical-align: middle; }
+
 div.center {
   overflow: hidden;
   *zoom: 1;
@@ -658,12 +752,42 @@ header {
     margin-bottom: 0;
     font-weight: 700;
     color: inherit; }
-  header .search input {
-    border: none;
-    border-radius: 4px;
-    min-width: 270px;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.5);
-    padding: .4rem .6rem; }
+  header .search {
+    position: relative; }
+    header .search input {
+      border: none;
+      border-radius: 4px;
+      min-width: 270px;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.5);
+      padding: .4rem .6rem; }
+    header .search i {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -8px; }
+  header .toggle {
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    margin-left: 30px;
+    padding: 0 30px; }
+    header .toggle .icon {
+      display: inline-block;
+      vertical-align: middle;
+      width: 25px;
+      height: 20px;
+      background: url("/img/MenuTopVisible.png") no-repeat 0 0; }
+      @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+        header .toggle .icon {
+          background-image: url("/img/MenuTopVisible@2x.png");
+          background-size: 100%, 100%; } }
+      header .toggle .icon.disabled .icon {
+        opacity: 0.2; }
+      header .toggle .icon.active {
+        background: url("/img/MenuTopActive.png") no-repeat 0 0; }
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+          header .toggle .icon.active {
+            background-image: url("/img/MenuTopActive@2x.png");
+            background-size: 100%, 100%; } }
 
 footer {
   background-color: #1d1d1d;

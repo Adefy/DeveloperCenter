@@ -14,5 +14,10 @@ ul.tabs
   - for (var i = 0; i < 7; ++i) 
     div
       img.preview(src="/img/demo.jpg")
-      a(href="#") Gist for API
+      span.title
+        a(href="#") Gist for API
+        span.platforms
+          img(src="/img/android.png" data-at2x="/img/android@2x.png")
+          | /
+          img(src="/img/apple.png" data-at2x="/img/apple@2x.png")
       p In API Blueprint a resource definition starts with a Markdown

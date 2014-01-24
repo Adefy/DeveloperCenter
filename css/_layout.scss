@@ -249,9 +249,15 @@ $container_margin:  3.2%; // auto|px|%  //
     margin-bottom: 1.125rem;
   }
 
-  a { 
+  span.title {
+    overflow: hidden;
     display: block;
     margin-bottom: .5rem;
+    a { float: left; }
+    .platforms {
+      float: right;
+      color: #ccc;
+    }
   }
 }
 
@@ -327,5 +333,55 @@ $container_margin: 0; // auto|px|%  //
   .logo {
     .img {@include column(4); text-align: center}
     .link {@include column(4); line-height: 84px}
+  }
+}
+
+// Editor controls
+
+.controls {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 2rem;
+  & > * { display: inline-block; }
+
+  button {
+    padding: 6px 10px;
+    margin: 0 .35rem;
+    &:first-of-type { margin-left: 0}
+    text-align: center;
+    border-radius: 50%/50%;
+
+    background-color: #c0c8ce;
+    border: none;
+    vertical-align: middle;
+
+    &:hover {
+      color: #fff;
+      background-color: #abb6be;
+    }
+    &.active {
+      color: #fff;
+      background-color: #33b5e5;
+    }
+    // microadjustments because positioning icons in circles is hard in CSS
+    i { margin: 0; vertical-align: -5px }
+    &.play i { margin-left: 1px; margin-right: -1px }
+    &.fastforward i { margin-left: 1px; margin-right: -1px }
+    &.rewind i { margin-left: -1px; margin-right: 1px }
+    &.rewind, &.fastforward {font-size: .75rem; padding: 7px 11px;}
+
+    &.rotate, &.scale { padding: 6px; }
+  }
+}
+
+// Preview area next to the editor
+.preview {
+  height: 440px;
+  line-height: 440px;
+
+  text-align: center;
+
+  img { 
+    vertical-align: middle;
   }
 }
