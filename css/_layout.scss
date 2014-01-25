@@ -104,6 +104,15 @@ $container_margin:  0; // auto|px|%  //
   @include generate_helper_classes();
 }
 
+// full width layout should have 4 column spreads
+.container.no-sidebar .content {
+  .spread {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+
 // content area grid: on sidebar pages 3.2% = 30px gutter
 $total_columns:   9;     //        //
 $total_width:   100%;     // px|100%    // px = fixed, 100% = fluid
@@ -378,5 +387,16 @@ $container_margin: 0; // auto|px|%  //
 
   img { 
     vertical-align: middle;
+  }
+}
+
+// downloads area under the preview
+.downloads {
+  margin-top: 2rem;
+  h5 { margin-bottom: 1rem;}
+  a {
+    display: block;
+    padding-bottom: .750rem;
+    border-bottom: 1px solid #e8e8e8;
   }
 }

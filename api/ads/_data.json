@@ -1,0 +1,16 @@
+{
+  "create": {
+    "title": "Create a new ad",
+    "subtitle": "Transfers are submitted to you on a seven-calendar-day rolling basis.",
+    "route": "POST /api/v1/ads",
+    
+    "args": [
+      {"name": "id", "desc": "Integer ID", "example": "123"},
+      {"name": "id", "desc": "Integer ID", "example": "123"},
+      {"name": "id", "desc": "Integer ID", "example": "123"}
+    ],
+    "attrs": [
+      {"name": "name", "desc": "Short descriptional name", "example": "\"My Ad\""}
+    ]
+  }
+}

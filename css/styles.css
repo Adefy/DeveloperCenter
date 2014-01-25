@@ -116,10 +116,21 @@ button {
   button.center {
     margin: 1rem auto; }
 
+table {
+  width: 100%;
+  font-size: .875rem; }
+  table thead {
+    border-top: 1px solid #33b5e5;
+    border-bottom: 1px solid #e8e8e8; }
+  table tbody tr {
+    border-bottom: 1px solid #f9fafa; }
+  table td {
+    padding: 1rem .5rem; }
+
 hr {
   height: 1px;
   background-color: #e8e8e8;
-  margin: 2rem 0;
+  margin: 2rem;
   border: none; }
 
 ol {
@@ -426,6 +437,11 @@ i {
   .container.no-sidebar .content .push11 {
     margin-left: 93.91%; }
 
+.container.no-sidebar .content .spread {
+  -moz-column-count: 4;
+  -webkit-column-count: 4;
+  column-count: 4; }
+
 .content {
   width: 93.6%;
   margin: 0 3.2%;
@@ -700,6 +716,15 @@ i {
   text-align: center; }
   .preview img {
     vertical-align: middle; }
+
+.downloads {
+  margin-top: 2rem; }
+  .downloads h5 {
+    margin-bottom: 1rem; }
+  .downloads a {
+    display: block;
+    padding-bottom: .750rem;
+    border-bottom: 1px solid #e8e8e8; }
 
 div.center {
   overflow: hidden;

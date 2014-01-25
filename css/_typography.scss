@@ -74,10 +74,23 @@ button {
   }
 }
 
+table {
+  width: 100%;
+  font-size: .875rem;
+  thead {
+    border-top: 1px solid #33b5e5;
+    border-bottom: 1px solid #e8e8e8;
+  }
+  tbody {
+    tr { border-bottom: 1px solid #f9fafa }
+  }
+  td { padding: 1rem .5rem; }
+}
+
 hr {
   height: 1px;
   background-color: #e8e8e8;
-  margin: 2rem 0;
+  margin: 2rem;
   border: none;
 }
 

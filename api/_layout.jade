@@ -1,0 +1,67 @@
+!= partial("../_shared/head")
+body
+  != partial("../_shared/header")
+  .main
+    .container.no-sidebar: .content
+      h1= title
+      h3= subtitle
+
+      hr
+      .row
+        .col3
+          h3 JSON response
+        .col3.push3.right
+          .dropdown 
+            button Change theme
+            ul
+              li.editor-light Tomorrow
+              li.editor-dark Tomorrow Night
+
+      != yield
+
+      hr 
+
+      .row
+        .col6
+          h3 Arguments
+
+          table
+            thead
+              tr
+                td Name
+                td Description
+                td Example value
+            tbody
+              each arg in args
+                tr
+                  td= arg.name
+                  td= arg.desc
+                  td= arg.example
+
+        .col6.push6
+          h3 Attributes
+
+          table
+            thead
+              tr
+                td Name
+                td Description
+                td Example value
+            tbody
+              each attr in attrs
+                tr
+                  td= attr.name
+                  td= attr.desc
+                  td= attr.example
+
+      hr
+
+      h3 API Queries
+
+      .spread: ul.listing
+        for page, slug in public.api._data
+          li
+            a(href="#{slug}")= page.route
+            p= page.title
+    != partial("../_shared/sidebar")
+  != partial("../_shared/footer")
