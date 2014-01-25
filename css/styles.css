@@ -564,7 +564,7 @@ i {
     clear: none; }
   .demos div {
     vertical-align: top; }
-  .demos img.preview {
+  .demos img.thumbnail {
     display: block;
     margin-bottom: 1.125rem; }
   .demos span.title {

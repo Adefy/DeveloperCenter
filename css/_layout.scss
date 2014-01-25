@@ -239,7 +239,7 @@ $container_margin:  3.2%; // auto|px|%  //
   @include generate_grid_positions(div, 3);
 
   div { vertical-align: top }
-  img.preview {
+  img.thumbnail {
     display: block;
     margin-bottom: 1.125rem;
   }
