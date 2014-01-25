@@ -74,6 +74,22 @@ script.
       $('.sidebar').removeClass('hide');
       $('.toggle').removeClass('active').addClass('disabled');
     }
+
+    if ($('#editor').length > 0 && !$('#editor').hasClass('ace_editor')) {
+      editor = ace.edit("editor");
+      editor.setTheme("ace/theme/tomorrow");
+      editor.getSession().setMode("ace/mode/javascript");
+
+      $('.editor-light').click(function(e) {
+        editor.setTheme("ace/theme/tomorrow");
+        e.preventDefault();
+      });
+
+      $('.editor-dark').click(function(e) {
+        editor.setTheme("ace/theme/tomorrow_night");
+        e.preventDefault();
+      });
+    }
   }
 
   // prepare page on initial page load and pjax reloads
@@ -94,18 +110,4 @@ script.
         $('.sidebar').addClass('hide');
       }
     }
-  });
-
-  var editor = ace.edit("editor");
-  editor.setTheme("ace/theme/tomorrow");
-  editor.getSession().setMode("ace/mode/javascript");
-
-  $('.editor-light').click(function(e) {
-    editor.setTheme("ace/theme/tomorrow");
-    e.preventDefault();
-  });
-
-  $('.editor-dark').click(function(e) {
-    editor.setTheme("ace/theme/tomorrow_night");
-    e.preventDefault();
   });
