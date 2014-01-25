@@ -59,9 +59,11 @@ body
       h3 API Queries
 
       .spread: ul.listing
-        for page, slug in public.api._data
-          li
-            a(href="#{slug}")= page.route
-            p= page.title
+        each data in public.api
+          if (data._data)
+            each page, slug in data._data
+              li
+                a(href="#{slug}")= page.route
+                p= page.title
     != partial("../_shared/sidebar")
   != partial("../_shared/footer")
