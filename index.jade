@@ -42,33 +42,9 @@ hr
 h3 API Queries
 
 .spread: ul.listing
-  li
-    a /api/v1/publishers
-    p Hovercraft document
-  li 
-    a /api/v1/publishers/:id
-    p Description
-  li 
-    a /api/v1/publishers/:id
-    p Description
-  li 
-    a /api/v1/publishers/:id
-    p Description
-  li 
-    a /api/v1/publishers/:id
-    p Description
-  li 
-    a /api/v1/publishers/:id
-    p Description
-  li 
-    a /api/v1/publishers/:id
-    p Description
-  li 
-    a /api/v1/publishers/:id
-    p Description
-  li 
-    a /api/v1/publishers/:id
-    p Description
-  li 
-    a /api/v1/publishers/:id
-    p Description
+  each data in public.api
+    if (data._data)
+      each page, slug in data._data
+        li
+          a(href="#{slug}")= page.route
+          p= page.title

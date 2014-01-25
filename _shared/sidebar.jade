@@ -1,7 +1,7 @@
 .sidebar
   ul
     li: a(href="#") Class listing
-    li.active
+    li
       a(href="#") Tutorials
       ul
         li: a(href="#") Accounts
@@ -9,7 +9,13 @@
         li: a(href="#") Engines
         li: a(href="#") Group Positions
     li: a(href="#") Tech demos
-    li: a(href="#") API
+    li(class="#{ current.path[0] == 'api' ? 'active' : '' }")
+      a(href="/api") API
+      ul
+        li: a(href="#") Accounts
+        li: a(href="#") Account
+        li: a(href="#") Engines
+        li: a(href="#") Group Positions
     li: a(href="#") Library references
     li: a(href="#") Design documents
-    li: a(href="/contact") Contact form
+    li( class="#{ current.source == 'contact' ? 'active' : '' }"): a(href="/contact") Contact form

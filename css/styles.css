@@ -281,6 +281,8 @@ i {
         border-radius: 3px 3px 0 0; }
       .sidebar ul li.active {
         color: #33b5e5; }
+        .sidebar ul li.active ul {
+          display: block; }
       .sidebar ul li.active a::after {
         content: "●";
         font-size: 1rem;
@@ -295,6 +297,8 @@ i {
         display: block;
         padding: 1rem;
         border-bottom: 1px solid rgba(226, 229, 232, 0.8); }
+    .sidebar ul ul {
+      display: none; }
     .sidebar ul ul li {
       font-size: .875rem;
       background-color: #f9fafa;

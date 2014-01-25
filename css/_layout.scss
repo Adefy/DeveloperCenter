@@ -48,7 +48,10 @@ $container_margin:  auto; // auto|px|%  //
 
       &:first-of-type { border-radius: 3px 3px 0 0; }
 
-      &.active { color: #33b5e5; }
+      &.active { 
+        color: #33b5e5;
+        ul { display: block; }
+      }
       &.active a::after {
         content: "●";
         font-size: 1rem;
@@ -67,6 +70,7 @@ $container_margin:  auto; // auto|px|%  //
         border-bottom: 1px solid rgba(226,229,232,.8);
       }
     }
+    ul { display: none; } // hide it unless active
     // nested list
     ul li {
       font-size: .875rem;
