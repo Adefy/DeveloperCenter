@@ -53,6 +53,49 @@ footer
 script(src="/vendor/retina-1.1.0.min.js")
 
 script.
+  // pjax handler
+  $(function() {
+    $("body").on("click", "a", function (event) {
+      $.pjax({
+        "url": $(this).attr("href"),
+        "fragment": ".main",
+        "container": ".main"
+      });
+      event.preventDefault();
+    });
+  });
+
+  // prepare page (sidebar visibility, toggle button)
+  var preparePage = function() {
+    if ($('.container').hasClass('no-sidebar')) {
+      $('.sidebar').addClass('hide');
+      $('.toggle').removeClass('disabled');
+    } else {
+      $('.sidebar').removeClass('hide');
+      $('.toggle').removeClass('active').addClass('disabled');
+    }
+  }
+
+  // prepare page on initial page load and pjax reloads
+  preparePage();
+  $(document).on('pjax:end', function() {
+    preparePage();
+  });
+
+  $('.toggle').click(function(){
+    $this = $(this);
+
+    if(!$this.hasClass('disabled')) {
+      $this.toggleClass('active');
+
+      if ($this.hasClass('active')) {
+        $('.sidebar').removeClass('hide');
+      } else {
+        $('.sidebar').addClass('hide');
+      }
+    }
+  });
+
   var editor = ace.edit("editor");
   editor.setTheme("ace/theme/tomorrow");
   editor.getSession().setMode("ace/mode/javascript");

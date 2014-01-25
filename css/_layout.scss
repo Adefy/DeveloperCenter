@@ -180,18 +180,13 @@ $container_margin:  3.2%; // auto|px|%  //
 		blockquote { // aligns to top of section
 			@include column(4);
 
-			padding: 20px;
-			background-color: #f7f8fa;
-			color: rgba(133,133,133,.6);
-			font-size: .875rem;
 			margin-left: 5%;
 			left: 100%;
 			top: 0;
 			float: left;
-			//margin-right: -100%;
 			width: 48.2%;
 			position: absolute;
-			//right: 100%;
+      background-color: #f7f8fa;
 		}
 	}
 

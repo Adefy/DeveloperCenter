@@ -120,6 +120,13 @@ ol.listing li {
   color: #33b5e5;
 }
 
+// comment
+blockquote {
+  padding: 20px;
+  color: rgba(133,133,133,.6);
+  font-size: .875rem;
+}
+
 input[type="text"], input[type="email"], input[type="password"], textarea {
   font-family: Gudea;
   font-size: 1rem;

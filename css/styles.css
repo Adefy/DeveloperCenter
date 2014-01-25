@@ -150,6 +150,11 @@ ol.listing li {
   padding: 15px 0;
   color: #33b5e5; }
 
+blockquote {
+  padding: 20px;
+  color: rgba(133, 133, 133, 0.6);
+  font-size: .875rem; }
+
 input[type="text"], input[type="email"], input[type="password"], textarea {
   font-family: Gudea;
   font-size: 1rem;
@@ -494,16 +499,13 @@ i {
       float: left;
       margin-right: -100%;
       width: 42.67%;
-      padding: 20px;
-      background-color: #f7f8fa;
-      color: rgba(133, 133, 133, 0.6);
-      font-size: .875rem;
       margin-left: 5%;
       left: 100%;
       top: 0;
       float: left;
       width: 48.2%;
-      position: absolute; }
+      position: absolute;
+      background-color: #f7f8fa; }
   .content .media {
     overflow: hidden;
     *zoom: 1;
@@ -780,14 +782,14 @@ header {
         header .toggle .icon {
           background-image: url("/img/MenuTopVisible@2x.png");
           background-size: 100%, 100%; } }
-      header .toggle .icon.disabled .icon {
-        opacity: 0.2; }
-      header .toggle .icon.active {
-        background: url("/img/MenuTopActive.png") no-repeat 0 0; }
-        @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
-          header .toggle .icon.active {
-            background-image: url("/img/MenuTopActive@2x.png");
-            background-size: 100%, 100%; } }
+    header .toggle.disabled .icon {
+      opacity: 0.2; }
+    header .toggle.active .icon {
+      background: url("/img/MenuTopActive.png") no-repeat 0 0; }
+      @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+        header .toggle.active .icon {
+          background-image: url("/img/MenuTopActive@2x.png");
+          background-size: 100%, 100%; } }
 
 footer {
   background-color: #1d1d1d;
