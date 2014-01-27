@@ -1,7 +1,8 @@
 {
-  "globals": {
-    "title": "Acme Site",
-    "name"  : "John Doe",
-    "uri": "http://example.com"
-  }
+  "name": "Test",
+  "campaigns": [],
+  "approvalMessage": [],
+  "status": 0,
+  "data": "",
+  "id": "52e653e1d7803e7b56000005"
 }

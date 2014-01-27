@@ -1,0 +1,19 @@
+{
+  "name": "Test",
+  "campaigns": [],
+  "approvalMessage": [],
+  "status": 0,
+  "data": "",
+  "id": "52e653e1d7803e7b56000005",
+  "stats": {
+    "requests": 0,
+    "clicks": 0,
+    "impressions": 0,
+    "spent": 0,
+    "ctr": 0,
+    "impressions24h": 0,
+    "clicks24h": 0,
+    "ctr24h": 0,
+    "spent24h": 0
+  }
+}

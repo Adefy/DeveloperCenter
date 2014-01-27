@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Cookie Monster's Cookielicious",
+    "description": "",
+    "category": "Gambling",
+    "dailyBudget": 5000,
+    "pricing": "CPM",
+    "bidSystem": "Automatic",
+    "bid": 7,
+    "startDate": 1389291703173,
+    "endDate": 1390674103177,
+    "countriesExclude": [],
+    "countriesInclude": [],
+    "devicesExclude": [],
+    "devicesInclude": [],
+    "networks": [
+      "all"
+    ],
+    "ads": [],
+    "active": true,
+    "totalBudget": 0,
+    "id": "52e400f3d5d4620951000005",
+    "stats": {
+      "impressions": 0,
+      "clicks": 0,
+      "spent": 0,
+      "ctr": 0,
+      "requests": 0,
+      "impressions24h": 0,
+      "clicks24h": 0,
+      "ctr24h": 0,
+      "spent24h": 0
+    }
+  }
+]
