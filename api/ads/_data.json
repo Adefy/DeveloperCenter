@@ -1,0 +1,131 @@
+{
+  "show": {
+      "title": "Retrieve a single ad",
+      "route": "GET /api/v1/ads/:id",
+      "args": [
+        {
+          "name": "id",
+          "example": "\"52e653e1d7803e7b56000005\"",
+          "desc": "Hexadecimal ID of the ad we're fetching"
+        }
+      ],
+      "attrs": [{
+          "name": "name",
+          "example": "\"Test\"",
+          "desc": ""
+      }, {
+          "name": "campaigns",
+          "example": "\"[]\"",
+          "desc": ""
+      }, {
+          "name": "approvalMessage",
+          "example": "\"[]\"",
+          "desc": ""
+      }, {
+          "name": "status",
+          "example": 0,
+          "desc": ""
+      }, {
+          "name": "data",
+          "example": "\"\"",
+          "desc": ""
+      }, {
+          "name": "id",
+          "example": "\"52e653e1d7803e7b56000005\"",
+          "desc": "Hexadecimal ID"
+      }, {
+          "name": "stats",
+          "example": "\"{\\\"requests\\\"=>0, \\\"clicks\\\"=>0, \\\"impressions\\\"=>0, \\\"spent\\\"=>0, \\\"ctr\\\"=>0, \\\"impressions24h\\\"=>0, \\\"clicks24h\\\"=>0, \\\"ctr24h\\\"=>0, \\\"spent24h\\\"=>0}\"",
+          "desc": ""
+      }]
+  },
+  "index": {
+      "title": "Retrieve all ads",
+      "route": "GET /api/v1/ads",
+      "args": [],
+      "attrs": [
+        {
+        "name": {
+            "name": "Cookies",
+            "campaigns": [],
+            "approvalMessage": [],
+            "status": 0,
+            "data": "",
+            "id": "52e400b30af4620b51000005",
+            "stats": {
+                "requests": 200,
+                "clicks": 3,
+                "impressions": 50,
+                "spent": 300,
+                "ctr": 0
+            }
+        },
+        "example": "\"\"",
+        "desc": ""
+      }, 
+      {
+        "name": {
+            "name": "Test",
+            "campaigns": [],
+            "approvalMessage": [],
+            "status": 0,
+            "data": "",
+            "id": "52e653e1d7803e7b56000005",
+            "stats": {
+                "requests": 0,
+                "clicks": 0,
+                "impressions": 0,
+                "spent": 0,
+                "ctr": 0
+            }
+        },
+        "example": "\"\"",
+        "desc": ""
+      }
+    ]
+  },
+  "delete": {
+      "title": "Delete an ad",
+      "route": "DELETE /api/v1/ads/:id",
+      "args": [{
+          "name": "id",
+          "desc": "Hexadecimal ID of the ad",
+          "example": "\"52e653e1d7803e7b56000005\""
+        }],
+      "attrs": []
+  },
+  "create": {
+      "title": "Create a new ad",
+      "route": "POST /api/v1/ads",
+      "args": [{
+          "name": "name",
+          "example": "\"Test\"",
+          "desc": "Descriptive name"
+      }],
+      "attrs": [{
+          "name": "name",
+          "example": "\"Test\"",
+          "desc": "Descriptive name"
+      }, {
+          "name": "campaigns",
+          "example": "\"[ ]\"",
+          "desc": ""
+      }, {
+          "name": "approvalMessage",
+          "example": "\"[ ]\"",
+          "desc": ""
+      }, {
+          "name": "status",
+          "example": "\"0\"",
+          "desc": ""
+      }, {
+          "name": "data",
+          "example": "\"\"",
+          "desc": ""
+      }, {
+          "name": "id",
+          "example": "\"52e653e1d7803e7b56000005\"",
+          "desc": ""
+      }]
+  }
+}

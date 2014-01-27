@@ -1,0 +1,111 @@
+{
+    "show": {
+        "title": "Retrieve a single app",
+        "route": "GET /api/v1/publishers/:id",
+        "args": [
+          {
+            "name": "id",
+            "example": "\"52e3fe494abb3d0f5100000f\"",
+            "desc": "Hexadecimal ID of the ad we're fetching"
+          }
+        ],
+        "attrs": [{
+            "name": "apikey",
+            "example": "\"5OgP5kvob4HyaE1UXrpN0Re0\"",
+            "desc": ""
+        }, {
+            "name": "name",
+            "example": "\"MySexyApp\"",
+            "desc": ""
+        }, {
+            "name": "preferredPricing",
+            "example": "\"CPM\"",
+            "desc": ""
+        }, {
+            "name": "minimumCPC",
+            "example": 0,
+            "desc": ""
+        }, {
+            "name": "minimumCPM",
+            "example": 20,
+            "desc": ""
+        }, {
+            "name": "type",
+            "example": 0,
+            "desc": ""
+        }, {
+            "name": "active",
+            "example": "\"true\"",
+            "desc": ""
+        }, {
+            "name": "approvalMessage",
+            "example": "\"[]\"",
+            "desc": ""
+        }, {
+            "name": "status",
+            "example": 2,
+            "desc": ""
+        }, {
+            "name": "thumbURL",
+            "example": "\"\"",
+            "desc": ""
+        }, {
+            "name": "category",
+            "example": "\"Health & Fitness\"",
+            "desc": ""
+        }, {
+            "name": "description",
+            "example": "\"\"",
+            "desc": ""
+        }, {
+            "name": "url",
+            "example": "\"com.sexy\"",
+            "desc": ""
+        }, {
+            "name": "id",
+            "example": "\"52e3fe494abb3d0f5100000f\"",
+            "desc": ""
+        }, {
+            "name": "stats",
+            "example": "\"{\\\"clicks\\\"=>0, \\\"impressions\\\"=>0, \\\"earnings\\\"=>0, \\\"requests\\\"=>119804, \\\"ctr\\\"=>0, \\\"impressions24h\\\"=>0, \\\"clicks24h\\\"=>0, \\\"ctr24h\\\"=>0, \\\"earnings24h\\\"=>0, \\\"requests24h\\\"=>37350}\"",
+            "desc": ""
+        }]
+    },
+    "index": {
+        "title": "Retrieve all apps",
+        "route": "GET /api/v1/publishers",
+        "args": [],
+        "attrs": [{
+            "name": {
+                "apikey": "5OgP5kvob4HyaE1UXrpN0Re0",
+                "name": "MySexyApp",
+                "preferredPricing": "CPM",
+                "minimumCPC": 0,
+                "minimumCPM": 20,
+                "type": 0,
+                "active": true,
+                "approvalMessage": [],
+                "status": 2,
+                "thumbURL": "",
+                "category": "Health & Fitness",
+                "description": "",
+                "url": "com.sexy",
+                "id": "52e3fe494abb3d0f5100000f",
+                "stats": {
+                    "clicks": 0,
+                    "impressions": 0,
+                    "earnings": 0,
+                    "requests": 119804,
+                    "ctr": 0,
+                    "impressions24h": 0,
+                    "clicks24h": 0,
+                    "ctr24h": 0,
+                    "earnings24h": 0,
+                    "requests24h": 37350
+                }
+            },
+            "example": "\"\"",
+            "desc": ""
+        }]
+    }
+}

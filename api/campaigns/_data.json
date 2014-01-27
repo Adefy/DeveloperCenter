@@ -1,0 +1,188 @@
+{
+    "show": {
+        "title": "Retrieve a single campaign",
+        "route": "GET /api/v1/campaigns/:id",
+        "args": [
+          {
+            "name": "id",
+            "example": "\"52e3fe494abb3d0f5100000f\"",
+            "desc": "Hexadecimal ID of the campaign we're fetching"
+          }
+        ],
+        "attrs": [{
+            "name": "name",
+            "example": "\"Cookie Monster's Cookielicious\"",
+            "desc": ""
+        }, {
+            "name": "description",
+            "example": "\"\"",
+            "desc": ""
+        }, {
+            "name": "category",
+            "example": "\"Gambling\"",
+            "desc": ""
+        }, {
+            "name": "dailyBudget",
+            "example": "\"5000\"",
+            "desc": ""
+        }, {
+            "name": "pricing",
+            "example": "\"CPM\"",
+            "desc": ""
+        }, {
+            "name": "bidSystem",
+            "example": "\"Automatic\"",
+            "desc": ""
+        }, {
+            "name": "bid",
+            "example": "\"7\"",
+            "desc": ""
+        }, {
+            "name": "startDate",
+            "example": "\"1389291703173\"",
+            "desc": ""
+        }, {
+            "name": "endDate",
+            "example": "\"1390674103177\"",
+            "desc": ""
+        }, {
+            "name": "countriesExclude",
+            "example": "\"[]\"",
+            "desc": ""
+        }, {
+            "name": "countriesInclude",
+            "example": "\"[]\"",
+            "desc": ""
+        }, {
+            "name": "devicesExclude",
+            "example": "\"[]\"",
+            "desc": ""
+        }, {
+            "name": "devicesInclude",
+            "example": "\"[]\"",
+            "desc": ""
+        }, {
+            "name": "networks",
+            "example": "\"[\\\"all\\\"]\"",
+            "desc": ""
+        }, {
+            "name": "ads",
+            "example": "\"[]\"",
+            "desc": ""
+        }, {
+            "name": "active",
+            "example": "\"true\"",
+            "desc": ""
+        }, {
+            "name": "totalBudget",
+            "example": "\"0\"",
+            "desc": ""
+        }, {
+            "name": "id",
+            "example": "\"52e400f3d5d4620951000005\"",
+            "desc": ""
+        }, {
+            "name": "stats",
+            "example": "\"{\\\"impressions\\\"=>0, \\\"clicks\\\"=>0, \\\"spent\\\"=>0, \\\"ctr\\\"=>0, \\\"requests\\\"=>0, \\\"impressions24h\\\"=>0, \\\"clicks24h\\\"=>0, \\\"ctr24h\\\"=>0, \\\"spent24h\\\"=>0}\"",
+            "desc": ""
+        }]
+    },
+    "index": {
+        "title": "Retrieve all campaigns",
+        "route": "GET /api/v1/campaigns",
+        "args": [],
+        "attrs": [{
+            "name": {
+                "name": "Cookie Monster's Cookielicious",
+                "description": "",
+                "category": "Gambling",
+                "dailyBudget": 5000,
+                "pricing": "CPM",
+                "bidSystem": "Automatic",
+                "bid": 7,
+                "startDate": 1389291703173,
+                "endDate": 1390674103177,
+                "countriesExclude": [],
+                "countriesInclude": [],
+                "devicesExclude": [],
+                "devicesInclude": [],
+                "networks": ["all"],
+                "ads": [],
+                "active": true,
+                "totalBudget": 0,
+                "id": "52e400f3d5d4620951000005",
+                "stats": {
+                    "impressions": 0,
+                    "clicks": 0,
+                    "spent": 0,
+                    "ctr": 0,
+                    "requests": 0,
+                    "impressions24h": 0,
+                    "clicks24h": 0,
+                    "ctr24h": 0,
+                    "spent24h": 0
+                }
+            },
+            "example": "\"\"",
+            "desc": ""
+        }]
+    },
+    "create": {
+        "title": "Create a new campaign",
+        "route": "POST /api/v1/campaigns",
+        "args": [{
+            "name": "pricing",
+            "example": "\"CPM\"",
+            "desc": ""
+        }, {
+            "name": "bidSystem",
+            "example": "\"Automatic\"",
+            "desc": ""
+        }, {
+            "name": "networks",
+            "example": "\"all\"",
+            "desc": ""
+        }, {
+            "name": "scheduling",
+            "example": "\"no\"",
+            "desc": ""
+        }, {
+            "name": "devices",
+            "example": "\"[]\"",
+            "desc": ""
+        }, {
+            "name": "countries",
+            "example": "\"[]\"",
+            "desc": ""
+        }, {
+            "name": "name",
+            "example": "\"Test campaign\"",
+            "desc": ""
+        }, {
+            "name": "description",
+            "example": "\"asd\"",
+            "desc": ""
+        }, {
+            "name": "category",
+            "example": "\"Automotive\"",
+            "desc": ""
+        }, {
+            "name": "dailyBudget",
+            "example": "\"10\"",
+            "desc": ""
+        }, {
+            "name": "bid",
+            "example": "\"10\"",
+            "desc": ""
+        }, {
+            "name": "startDate",
+            "example": "\"1389185754317\"",
+            "desc": ""
+        }, {
+            "name": "endDate",
+            "example": "\"1390827354319\"",
+            "desc": ""
+        }],
+        "attrs": []
+    }
+}
