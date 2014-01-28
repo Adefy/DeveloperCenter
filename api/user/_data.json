@@ -1,0 +1,93 @@
+{
+  "get": {
+      "title": "Retrieve account details",
+      "route": "GET /api/v1/user",
+      "args": [],
+      "attrs": [{
+          "name": "email",
+          "example": "john@example.com",
+          "desc": ""
+      },
+      {
+          "name": "username",
+          "example": "John",
+          "desc": ""
+      },
+      {
+          "name": "version",
+          "example": 1,
+          "desc": ""
+      },
+      {
+          "name": "pendingDeposit",
+          "example": "",
+          "desc": ""
+      },
+      {
+          "name": "transactions",
+          "example": [],
+          "desc": ""
+      },
+      {
+          "name": "funds",
+          "example": 100000,
+          "desc": ""
+      },
+      {
+          "name": "vat",
+          "example": "000",
+          "desc": ""
+      },
+      {
+          "name": "phone",
+          "example": "+11 22 33 445",
+          "desc": ""
+      },
+      {
+          "name": "company",
+          "example": "Acme Corp.",
+          "desc": ""
+      },
+      {
+          "name": "country",
+          "example": "Canada",
+          "desc": ""
+      },
+      {
+          "name": "postalCode",
+          "example": "30110",
+          "desc": ""
+      },
+      {
+          "name": "state",
+          "example": "",
+          "desc": ""
+      },
+      {
+          "name": "city",
+          "example": "Vancouver",
+          "desc": ""
+      },
+      {
+          "name": "address",
+          "example": "Holmes Road 44a",
+          "desc": ""
+      },
+      {
+          "name": "lname",
+          "example": "Doe",
+          "desc": ""
+      },
+      {
+          "name": "fname",
+          "example": "John",
+          "desc": ""
+      },
+      {
+          "name": "id",
+          "example": "52e3fbcc9a20010551000002",
+          "desc": "Hexadecimal ID"
+      }
+    ]
+  }
+}

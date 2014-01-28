@@ -155,7 +155,7 @@
       },
       {
         "name": "stat",
-        "example": "\"52e653e1d7803e7b56000005\"",
+        "example": "\"clicks\"",
         "desc": "Type of statistics"
       },
       {

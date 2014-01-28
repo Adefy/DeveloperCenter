@@ -186,12 +186,76 @@
         "attrs": []
     },
 
+    "update": {
+        "title": "Update an existing campaign",
+        "route": "POST /api/v1/campaigns/:id",
+        "args": [{
+            "name": "id",
+            "desc": "Hexadecimal ID of the campaign",
+            "example": "\"52e653e1d7803e7b56000005\""
+        }],
+        "attrs": [{
+            "name": "pricing",
+            "example": "\"CPM\"",
+            "desc": "Pricing model (CPM or CPC)"
+        }, {
+            "name": "bidSystem",
+            "example": "\"Automatic\"",
+            "desc": "Bid system (automatic or manual)"
+        },  {
+            "name": "networks",
+            "example": "\"all\"",
+            "desc": "Targeted networks (wifi, mobile or all)"
+        }, {
+            "name": "scheduling",
+            "example": "\"no\"",
+            "desc": "Whether scheduling is wanted"
+        }, {
+            "name": "devices",
+            "example": "[]",
+            "desc": ""
+        }, {
+            "name": "countries",
+            "example": "[]",
+            "desc": ""
+        }, {
+            "name": "name",
+            "example": "\"Test campaign\"",
+            "desc": ""
+        }, {
+            "name": "description",
+            "example": "\"asd\"",
+            "desc": ""
+        }, {
+            "name": "category",
+            "example": "\"Automotive\"",
+            "desc": ""
+        }, {
+            "name": "dailyBudget",
+            "example": "\"10\"",
+            "desc": ""
+        }, {
+            "name": "bid",
+            "example": "\"10\"",
+            "desc": ""
+        }, {
+            "name": "startDate",
+            "example": 1389185754317,
+            "desc": ""
+        }, {
+            "name": "endDate",
+            "example": 1390827354319,
+            "desc": ""
+        }],
+        "attrs": []
+    },
+
     "delete": {
         "title": "Delete a campaign",
         "route": "DELETE /api/v1/campaigns/:id",
         "args": [{
             "name": "id",
-            "desc": "Hexadecimal ID of the ad",
+            "desc": "Hexadecimal ID of the campaign",
             "example": "\"52e653e1d7803e7b56000005\""
         }],
         "attrs": []
@@ -208,7 +272,7 @@
       },
       {
         "name": "stat",
-        "example": "\"52e653e1d7803e7b56000005\"",
+        "example": "\"clicks\"",
         "desc": "Type of statistics"
       },
       {

@@ -1,0 +1,44 @@
+{
+  "publishers": {
+    "title": "Retrieve analytics for publishers",
+    "route": "GET /api/v1/analytics/publishers/:id/:stat",
+    "args": [{
+      "name": "id",
+      "example": "\"52e653e1d7803e7b56000005\"",
+      "desc": "Hexadecimal ID"
+    },
+    {
+      "name": "stat",
+      "example": "\"clicks\"",
+      "desc": "Type of statistics"
+    }],
+    "attrs": []
+  },
+
+  "campaigns": {
+    "title": "Retrieve analytics for campaigns",
+    "route": "GET /api/v1/analytics/campaigns/:id/:stat",
+    "args": [{
+      "name": "id",
+      "example": "\"52e653e1d7803e7b56000005\"",
+      "desc": "Hexadecimal ID"
+    },
+    {
+      "name": "stat",
+      "example": "\"clicks\"",
+      "desc": "Type of statistics"
+    }],
+    "attrs": []
+  },
+
+  "totals": {
+    "title": "Retrieve analytics totals",
+    "route": "GET /api/v1/analytics/totals/:stat",
+    "args": [{
+      "name": "stat",
+      "example": "\"clicks\"",
+      "desc": "Type of statistics"
+    }],
+    "attrs": []
+  }
+}

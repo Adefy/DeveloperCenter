@@ -1,0 +1,19 @@
+{
+  "email": "john@example.com",
+  "username": "John",
+  "version": 1,
+  "pendingDeposit": "",
+  "transactions": [],
+  "funds": 100000,
+  "vat": "000",
+  "phone": "+11 22 33 445",
+  "company": "Acme Corp.",
+  "country": "Canada",
+  "postalCode": "30110",
+  "state": "",
+  "city": "Vancouver",
+  "address": "Holmes Road 44a",
+  "lname": "Doe",
+  "fname": "John",
+  "id": "52e3fbcc9a20010551000002"
+}
