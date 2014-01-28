@@ -12,19 +12,19 @@
       "attrs": [{
           "name": "name",
           "example": "\"Test\"",
-          "desc": ""
+          "desc": "Descriptional name"
       }, {
           "name": "campaigns",
-          "example": "\"[]\"",
-          "desc": ""
+          "example": "[ { ... }, ... ]",
+          "desc": "An array of campaign objects"
       }, {
           "name": "approvalMessage",
-          "example": "\"[]\"",
-          "desc": ""
+          "example": "[{\"msg\": \"Looks okay.\", \"timestamp\": 12385422}, ...]",
+          "desc": "An array of approval messages and their times"
       }, {
           "name": "status",
           "example": 0,
-          "desc": ""
+          "desc": "A numeric value representing the ad state"
       }, {
           "name": "data",
           "example": "\"\"",
@@ -35,8 +35,8 @@
           "desc": "Hexadecimal ID"
       }, {
           "name": "stats",
-          "example": "\"{\\\"requests\\\"=>0, \\\"clicks\\\"=>0, \\\"impressions\\\"=>0, \\\"spent\\\"=>0, \\\"ctr\\\"=>0, \\\"impressions24h\\\"=>0, \\\"clicks24h\\\"=>0, \\\"ctr24h\\\"=>0, \\\"spent24h\\\"=>0}\"",
-          "desc": ""
+          "example": "{\"requests\": 50, \"clicks\": 3, ... }",
+          "desc": "A hash object containing numeric statistics"
       }]
   },
   "index": {
@@ -105,19 +105,19 @@
       "attrs": [{
           "name": "name",
           "example": "\"Test\"",
-          "desc": "Descriptive name"
+          "desc": "Descriptional name"
       }, {
           "name": "campaigns",
-          "example": "\"[ ]\"",
-          "desc": ""
+          "example": "[ { ... }, ... ]",
+          "desc": "An array of campaign objects"
       }, {
           "name": "approvalMessage",
-          "example": "\"[ ]\"",
-          "desc": ""
+          "example": "[{\"msg\": \"Looks okay.\", \"timestamp\": 12385422}, ...]",
+          "desc": "An array of approval messages and their times"
       }, {
           "name": "status",
-          "example": "\"0\"",
-          "desc": ""
+          "example": 0,
+          "desc": "A numeric value representing the ad state"
       }, {
           "name": "data",
           "example": "\"\"",
@@ -125,7 +125,45 @@
       }, {
           "name": "id",
           "example": "\"52e653e1d7803e7b56000005\"",
-          "desc": ""
+          "desc": "Hexadecimal ID"
+      }, {
+          "name": "stats",
+          "example": "{\"requests\": 50, \"clicks\": 3, ... }",
+          "desc": "A hash object containing numeric statistics"
       }]
+  },
+
+  "approval": {
+    "title": "Request approval for ad",
+    "route": "POST /api/v1/:id/approval",
+    "args": [{
+      "name": "id",
+      "example": "\"52e653e1d7803e7b56000005\"",
+      "desc": "Hexadecimal ID"
+    }],
+    "attrs": []
+  },
+
+  "stats": {
+    "title": "Ad stats for a specific period of time",
+    "route": "GET /api/v1/ads/stats/:id/:stat/:range",
+    "args": [
+      {
+        "name": "id",
+        "example": "\"52e653e1d7803e7b56000005\"",
+        "desc": "Hexadecimal ID"
+      },
+      {
+        "name": "stat",
+        "example": "\"52e653e1d7803e7b56000005\"",
+        "desc": "Type of statistics"
+      },
+      {
+        "name": "range",
+        "example": "\"52e653e1d7803e7b56000005\"",
+        "desc": "Temporal range"
+      }
+    ],
+    "attrs": []
   }
 }

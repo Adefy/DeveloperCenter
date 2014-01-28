@@ -12,79 +12,79 @@
         "attrs": [{
             "name": "name",
             "example": "\"Cookie Monster's Cookielicious\"",
-            "desc": ""
+            "desc": "Descriptional name"
         }, {
             "name": "description",
             "example": "\"\"",
-            "desc": ""
+            "desc": "A short description"
         }, {
             "name": "category",
             "example": "\"Gambling\"",
             "desc": ""
         }, {
             "name": "dailyBudget",
-            "example": "\"5000\"",
-            "desc": ""
+            "example": 5000,
+            "desc": "Daily budget in dollars"
         }, {
             "name": "pricing",
             "example": "\"CPM\"",
-            "desc": ""
+            "desc": "Pricing model (CPM or CPC)"
         }, {
             "name": "bidSystem",
             "example": "\"Automatic\"",
-            "desc": ""
+            "desc": "Bid system (automatic or manual)"
         }, {
             "name": "bid",
-            "example": "\"7\"",
-            "desc": ""
+            "example": 7,
+            "desc": "Bid in dollars"
         }, {
             "name": "startDate",
-            "example": "\"1389291703173\"",
-            "desc": ""
+            "example": 1389291703173,
+            "desc": "Start date of campaign in unix time"
         }, {
             "name": "endDate",
-            "example": "\"1390674103177\"",
-            "desc": ""
+            "example": 1390674103177,
+            "desc": "End date of campaign in unix time"
         }, {
             "name": "countriesExclude",
-            "example": "\"[]\"",
-            "desc": ""
+            "example": "[]",
+            "desc": "Array of countries to exclude"
         }, {
             "name": "countriesInclude",
-            "example": "\"[]\"",
-            "desc": ""
+            "example": "[]",
+            "desc": "Array of countries to include"
         }, {
             "name": "devicesExclude",
-            "example": "\"[]\"",
-            "desc": ""
+            "example": "[]",
+            "desc": "Array of devices to exclude"
         }, {
             "name": "devicesInclude",
-            "example": "\"[]\"",
-            "desc": ""
+            "example": "[]",
+            "desc": "Array of devices to include"
         }, {
             "name": "networks",
-            "example": "\"[\\\"all\\\"]\"",
+            "example": "[\"all\"]",
             "desc": ""
         }, {
             "name": "ads",
-            "example": "\"[]\"",
+            "example": "[]",
             "desc": ""
         }, {
             "name": "active",
-            "example": "\"true\"",
-            "desc": ""
+            "example": "true",
+            "desc": "A boolean representing campaign state"
         }, {
             "name": "totalBudget",
-            "example": "\"0\"",
-            "desc": ""
+            "example": 0,
+            "desc": "Total budget in dollars"
         }, {
             "name": "id",
             "example": "\"52e400f3d5d4620951000005\"",
-            "desc": ""
+            "desc": "Hexadecimal ID"
         }, {
             "name": "stats",
-            "example": "\"{\\\"impressions\\\"=>0, \\\"clicks\\\"=>0, \\\"spent\\\"=>0, \\\"ctr\\\"=>0, \\\"requests\\\"=>0, \\\"impressions24h\\\"=>0, \\\"clicks24h\\\"=>0, \\\"ctr24h\\\"=>0, \\\"spent24h\\\"=>0}\"",
-            "desc": ""
+            "example": "{\"impressions\": 0, \"clicks\": 0, ... }",
+            "desc": "A hash object containing numeric statistics"
         }]
     },
     "index": {
@@ -133,26 +133,26 @@
         "args": [{
             "name": "pricing",
             "example": "\"CPM\"",
-            "desc": ""
+            "desc": "Pricing model (CPM or CPC)"
         }, {
             "name": "bidSystem",
             "example": "\"Automatic\"",
-            "desc": ""
-        }, {
+            "desc": "Bid system (automatic or manual)"
+        },  {
             "name": "networks",
             "example": "\"all\"",
-            "desc": ""
+            "desc": "Targeted networks (wifi, mobile or all)"
         }, {
             "name": "scheduling",
             "example": "\"no\"",
-            "desc": ""
+            "desc": "Whether scheduling is wanted"
         }, {
             "name": "devices",
-            "example": "\"[]\"",
+            "example": "[]",
             "desc": ""
         }, {
             "name": "countries",
-            "example": "\"[]\"",
+            "example": "[]",
             "desc": ""
         }, {
             "name": "name",
@@ -176,11 +176,11 @@
             "desc": ""
         }, {
             "name": "startDate",
-            "example": "\"1389185754317\"",
+            "example": 1389185754317,
             "desc": ""
         }, {
             "name": "endDate",
-            "example": "\"1390827354319\"",
+            "example": 1390827354319,
             "desc": ""
         }],
         "attrs": []
