@@ -1,7 +1,7 @@
 [
   {
     "apikey": "5OgP5kvob4HyaE1UXrpN0Re0",
-    "name": "MySexyApp",
+    "name": "MyApp",
     "preferredPricing": "CPM",
     "minimumCPC": 0,
     "minimumCPM": 20,
@@ -12,7 +12,7 @@
     "thumbURL": "",
     "category": "Health & Fitness",
     "description": "",
-    "url": "com.sexy",
+    "url": "com.my.app",
     "id": "52e3fe494abb3d0f5100000f",
     "stats": {
       "clicks": 0,

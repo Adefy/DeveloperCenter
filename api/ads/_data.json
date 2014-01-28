@@ -135,7 +135,7 @@
 
   "approval": {
     "title": "Request approval for ad",
-    "route": "POST /api/v1/:id/approval",
+    "route": "POST /api/v1/ads/:id/approval",
     "args": [{
       "name": "id",
       "example": "\"52e653e1d7803e7b56000005\"",

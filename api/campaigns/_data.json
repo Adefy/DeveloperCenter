@@ -184,5 +184,61 @@
             "desc": ""
         }],
         "attrs": []
+    },
+
+    "delete": {
+        "title": "Delete a campaign",
+        "route": "DELETE /api/v1/campaigns/:id",
+        "args": [{
+            "name": "id",
+            "desc": "Hexadecimal ID of the ad",
+            "example": "\"52e653e1d7803e7b56000005\""
+        }],
+        "attrs": []
+    },
+
+  "stats": {
+    "title": "Campaign stats for a specific period of time",
+    "route": "GET /api/v1/campaigns/stats/:id/:stat/:range",
+    "args": [
+      {
+        "name": "id",
+        "example": "\"52e653e1d7803e7b56000005\"",
+        "desc": "Hexadecimal ID"
+      },
+      {
+        "name": "stat",
+        "example": "\"52e653e1d7803e7b56000005\"",
+        "desc": "Type of statistics"
+      },
+      {
+        "name": "range",
+        "example": "\"52e653e1d7803e7b56000005\"",
+        "desc": "Temporal range"
+      }
+    ],
+    "attrs": []
+  },
+
+    "activate": {
+        "title": "Activate campaign",
+        "route": "POST /api/v1/campaign/:id/activate",
+        "args": [{
+            "name": "id",
+            "example": "\"52e653e1d7803e7b56000005\"",
+            "desc": "Hexadecimal ID"
+        }],
+        "attrs": []
+    },
+
+    "deactivate": {
+        "title": "Deactivate campaign",
+        "route": "POST /api/v1/campaign/:id/deactivate",
+        "args": [{
+            "name": "id",
+            "example": "\"52e653e1d7803e7b56000005\"",
+            "desc": "Hexadecimal ID"
+        }],
+        "attrs": []
     }
 }
