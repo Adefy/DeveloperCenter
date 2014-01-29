@@ -1,17 +1,17 @@
 {
   "get": {
-      "title": "Retrieve account details",
-      "route": "GET /api/v1/user",
-      "args": [],
-      "attrs": [{
+    "title": "Retrieve account details",
+    "route": "GET /api/v1/user",
+    "args": [],
+    "attrs": [{
           "name": "email",
           "example": "john@example.com",
-          "desc": ""
+          "desc": "Primary email"
       },
       {
           "name": "username",
           "example": "John",
-          "desc": ""
+          "desc": "Username used for login"
       },
       {
           "name": "version",
@@ -31,22 +31,88 @@
       {
           "name": "funds",
           "example": 100000,
-          "desc": ""
+          "desc": "Funds on the account, in dollars"
       },
       {
           "name": "vat",
           "example": "000",
-          "desc": ""
+          "desc": "VAT number"
       },
       {
           "name": "phone",
           "example": "+11 22 33 445",
-          "desc": ""
+          "desc": "Phone number"
       },
       {
           "name": "company",
           "example": "Acme Corp.",
-          "desc": ""
+          "desc": "Company name"
+      },
+      {
+          "name": "country",
+          "example": "Canada",
+          "desc": "Country"
+      },
+      {
+          "name": "postalCode",
+          "example": "30110",
+          "desc": "Postal code"
+      },
+      {
+          "name": "state",
+          "example": "",
+          "desc": "State, if applicable"
+      },
+      {
+          "name": "city",
+          "example": "Vancouver",
+          "desc": "City"
+      },
+      {
+          "name": "address",
+          "example": "Holmes Road 44a",
+          "desc": "Address"
+      },
+      {
+          "name": "lname",
+          "example": "Doe",
+          "desc": "Last name"
+      },
+      {
+          "name": "fname",
+          "example": "John",
+          "desc": "First name"
+      },
+      {
+          "name": "id",
+          "example": "52e3fbcc9a20010551000002",
+          "desc": "Hexadecimal ID"
+      }
+    ]
+  },
+
+  "put": {
+    "title": "Update account details",
+    "route": "PUT /api/v1/user",
+    "args": [{
+          "name": "email",
+          "example": "john@example.com",
+          "desc": "Primary email"
+      },
+      {
+          "name": "vat",
+          "example": "000",
+          "desc": "VAT number"
+      },
+      {
+          "name": "phone",
+          "example": "+11 22 33 445",
+          "desc": "Phone number"
+      },
+      {
+          "name": "company",
+          "example": "Acme Corp.",
+          "desc": "Company name"
       },
       {
           "name": "country",
@@ -61,33 +127,36 @@
       {
           "name": "state",
           "example": "",
-          "desc": ""
+          "desc": "State, if applicable"
       },
       {
           "name": "city",
           "example": "Vancouver",
-          "desc": ""
+          "desc": "City"
       },
       {
           "name": "address",
           "example": "Holmes Road 44a",
-          "desc": ""
+          "desc": "Address"
       },
       {
           "name": "lname",
           "example": "Doe",
-          "desc": ""
+          "desc": "Last name"
       },
       {
           "name": "fname",
           "example": "John",
-          "desc": ""
-      },
-      {
-          "name": "id",
-          "example": "52e3fbcc9a20010551000002",
-          "desc": "Hexadecimal ID"
+          "desc": "First name"
       }
-    ]
+    ],
+    "attrs": []
+  },
+
+  "transactions": {
+    "title": "Get a list of transactions",
+    "route": "GET /api/v1/user/transactions",
+    "args": [],
+    "attrs": []
   }
 }
