@@ -19,40 +19,44 @@ body
 
       != yield
 
-      hr 
+      hr
 
       .row
         .col6
           h3 Request arguments
-
-          table
-            thead
-              tr
-                td Name
-                td Description
-                td Example value
-            tbody
-              each arg in args
+          if args.length > 0
+            table
+              thead
                 tr
-                  td= arg.name
-                  td= arg.desc
-                  td= arg.example
+                  td Name
+                  td Description
+                  td Example value
+              tbody
+                each arg in args
+                  tr
+                    td= arg.name
+                    td= arg.desc
+                    td= arg.example
+          else
+            p None
 
         .col6.push6
           h3 Response attributes
-
-          table
-            thead
-              tr
-                td Name
-                td Description
-                td Example value
-            tbody
-              each attr in attrs
+          if attrs.length > 0
+            table
+              thead
                 tr
-                  td= attr.name
-                  td= attr.desc
-                  td= attr.example
+                  td Name
+                  td Description
+                  td Example value
+              tbody
+                each attr in attrs
+                  tr
+                    td= attr.name
+                    td= attr.desc
+                    td= attr.example
+          else
+            p None
 
       hr
 
@@ -63,7 +67,6 @@ body
           if (data._data)
             each page, slug in data._data
               li
-                //p= JSON.stringify(data)
                 a(href="/api/#{folder}/#{slug}")= page.route
                 p= page.title
     != partial("../_shared/sidebar")
