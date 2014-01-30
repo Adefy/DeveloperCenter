@@ -476,6 +476,24 @@ $container_margin: 0; // auto|px|%  //
 }
 
 .method {
-  margin: 2rem 0;
-  h4 { margin-bottom: .875rem}
+  margin: 2.5rem 0;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  h4 { margin-bottom: .875rem }
+  h5 { margin-bottom: .750rem }
+
+  ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    margin-bottom: 1rem;
+
+    ul { margin-left: 1.5rem}
+  }
+  .name {
+    color: #414141;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
 }

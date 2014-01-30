@@ -806,9 +806,23 @@ div.search-center {
   line-height: 1.6; }
 
 .method {
-  margin: 2rem 0; }
+  margin: 2.5rem 0;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
   .method h4 {
-    margin-bottom: .875rem; }
+    margin-bottom: 0.875rem; }
+  .method h5 {
+    margin-bottom: 0.75rem; }
+  .method ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    margin-bottom: 1rem; }
+    .method ul ul {
+      margin-left: 1.5rem; }
+  .method .name {
+    color: #414141; }
+  .method *:last-child {
+    margin-bottom: 0; }
 
 div.center {
   overflow: hidden;

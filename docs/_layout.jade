@@ -31,9 +31,47 @@ body
         h3 Methods
         each def in functions
           .method
-            h4(id=def.name) #{def.name}(#{def.params.map(function(p) { return p.name }).join(", ")})
+            h4(id=def.name) (#{def.return && def.return.type || "void"}) #{def.is_class_method ? "@" : ""}#{def.name}(#{def.params.map(function(p) { return p.name }).join(", ")})
             each par in def.description
               p= par
+
+            if def.params.length > 0
+              h5 Parameters:
+
+              ul
+                each param in def.params
+                  li
+                    span.name= param.name
+                    span &nbsp;
+                    span.type (#{param.type})
+                    if param.description
+                      span &nbsp;
+                      | &mdash;
+                      span &nbsp;
+                      span.desc= param.description
+
+                    if param.option_data
+                      ul
+                        each opt in param.option_data
+                          li
+                            span.name= opt.name
+                            span &nbsp;
+                            span.type (#{opt.type})
+                            if opt.description
+                              span &nbsp;
+                              | &mdash;
+                              span &nbsp;
+                              span.desc= opt.description
+
+            if def.return
+              h5 Return
+              ul
+                li
+                  span.type (#{def.return.type})
+                  span &nbsp;
+                  | &mdash;
+                  span &nbsp;
+                  span.desc= def.return.description
 
     != partial("../_shared/sidebar")
   != partial("../_shared/footer")
