@@ -25,16 +25,9 @@ h3 Class listing
 
 .spread
   ul.listing
-    li: a(href="#") AJS
-    li: a(href="#") AJSBaseActor
-    li: a(href="#") AJSPolygon
-    li: a(href="#") AJSRectangle
-    li: a(href="#") AJSTriangle
-    li: a(href="#") AJSColor3
-    li: a(href="#") AJSUtilParam
-    li: a(href="#") AJSVector2
-    li: a(href="#") API Description
-    li: a(href="#") Library references
+    each page, slug in public.docs._data
+      li: a(href="/docs/#{slug}")= slug
+
   button Show me more
 
 hr

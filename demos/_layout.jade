@@ -1,0 +1,8 @@
+!= partial("../_shared/head")
+body
+  != partial("../_shared/header")
+  .main
+    .container.no-sidebar: .content
+      != yield
+    != partial("../_shared/sidebar")
+  != partial("../_shared/footer")
