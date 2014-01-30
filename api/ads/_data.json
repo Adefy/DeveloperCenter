@@ -26,10 +26,6 @@
           "example": 0,
           "desc": "A numeric value representing the ad state"
       }, {
-          "name": "data",
-          "example": "\"\"",
-          "desc": ""
-      }, {
           "name": "id",
           "example": "\"52e653e1d7803e7b56000005\"",
           "desc": "Hexadecimal ID"
@@ -50,7 +46,6 @@
             "campaigns": [],
             "approvalMessage": [],
             "status": 0,
-            "data": "",
             "id": "52e400b30af4620b51000005",
             "stats": {
                 "requests": 200,
@@ -69,7 +64,6 @@
             "campaigns": [],
             "approvalMessage": [],
             "status": 0,
-            "data": "",
             "id": "52e653e1d7803e7b56000005",
             "stats": {
                 "requests": 0,
@@ -118,10 +112,6 @@
           "name": "status",
           "example": 0,
           "desc": "A numeric value representing the ad state"
-      }, {
-          "name": "data",
-          "example": "\"\"",
-          "desc": ""
       }, {
           "name": "id",
           "example": "\"52e653e1d7803e7b56000005\"",

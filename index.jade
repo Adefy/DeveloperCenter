@@ -12,7 +12,7 @@ h3
   div
     h3 Develop
     p Create native, organic ads with our library and authoring tools
-.columns
+.columns.hide
   div
     button Show me more
   div
@@ -27,9 +27,6 @@ h3 Class listing
   ul.listing
     each page, slug in public.docs._data
       li: a(href="/docs/#{slug}")= slug
-
-  button Show me more
-
 hr
 
 h3 API Queries
