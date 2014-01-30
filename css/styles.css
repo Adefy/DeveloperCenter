@@ -142,7 +142,8 @@ ul.listing, ol.listing {
   ul.listing li, ol.listing li {
     padding: 15px;
     border-bottom: 1px solid #e8e8e8;
-    -webkit-column-break-inside: avoid;
+    -webkit-column-break-inside: avoid; }
+  ul.listing.small li, ol.listing.small li {
     font-size: 14px; }
   ul.listing p, ol.listing p {
     margin: 0.5em 0 0; }
