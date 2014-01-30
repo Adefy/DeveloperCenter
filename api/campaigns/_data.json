@@ -92,39 +92,9 @@
         "route": "GET /api/v1/campaigns",
         "args": [],
         "attrs": [{
-            "name": {
-                "name": "Cookie Monster's Cookielicious",
-                "description": "",
-                "category": "Gambling",
-                "dailyBudget": 5000,
-                "pricing": "CPM",
-                "bidSystem": "Automatic",
-                "bid": 7,
-                "startDate": 1389291703173,
-                "endDate": 1390674103177,
-                "countriesExclude": [],
-                "countriesInclude": [],
-                "devicesExclude": [],
-                "devicesInclude": [],
-                "networks": ["all"],
-                "ads": [],
-                "active": true,
-                "totalBudget": 0,
-                "id": "52e400f3d5d4620951000005",
-                "stats": {
-                    "impressions": 0,
-                    "clicks": 0,
-                    "spent": 0,
-                    "ctr": 0,
-                    "requests": 0,
-                    "impressions24h": 0,
-                    "clicks24h": 0,
-                    "ctr24h": 0,
-                    "spent24h": 0
-                }
-            },
-            "example": "\"\"",
-            "desc": ""
+            "name": "Campaigns",
+            "example": "[{ name: \"\", ...}, {...}, ...]",
+            "desc": "Owned campaign list"
         }]
     },
     "create": {
@@ -139,49 +109,33 @@
             "example": "\"Automatic\"",
             "desc": "Bid system (automatic or manual)"
         },  {
-            "name": "networks",
-            "example": "\"all\"",
-            "desc": "Targeted networks (wifi, mobile or all)"
-        }, {
-            "name": "scheduling",
-            "example": "\"no\"",
-            "desc": "Whether scheduling is wanted"
-        }, {
-            "name": "devices",
-            "example": "[]",
-            "desc": ""
-        }, {
-            "name": "countries",
-            "example": "[]",
-            "desc": ""
-        }, {
             "name": "name",
             "example": "\"Test campaign\"",
-            "desc": ""
+            "desc": "Campaign name"
         }, {
             "name": "description",
             "example": "\"asd\"",
-            "desc": ""
+            "desc": "Campaign description"
         }, {
             "name": "category",
             "example": "\"Automotive\"",
-            "desc": ""
+            "desc": "Campaign category"
         }, {
             "name": "dailyBudget",
-            "example": "\"10\"",
-            "desc": ""
+            "example": "1000",
+            "desc": "Daily budget in USD"
         }, {
             "name": "bid",
-            "example": "\"10\"",
-            "desc": ""
+            "example": "3.23",
+            "desc": "Target campaign bid in USD"
         }, {
             "name": "startDate",
             "example": 1389185754317,
-            "desc": ""
+            "desc": "Start execution date"
         }, {
             "name": "endDate",
             "example": 1390827354319,
-            "desc": ""
+            "desc": "End execution date"
         }],
         "attrs": []
     },
@@ -195,6 +149,10 @@
             "example": "\"52e653e1d7803e7b56000005\""
         }],
         "attrs": [{
+            "name": "ads",
+            "example": "[\"52e653e1d7803e7b56000005\", ...]",
+            "desc": "List of ads to include"
+        }, {
             "name": "pricing",
             "example": "\"CPM\"",
             "desc": "Pricing model (CPM or CPC)"
@@ -204,50 +162,45 @@
             "desc": "Bid system (automatic or manual)"
         },  {
             "name": "networks",
-            "example": "\"all\"",
-            "desc": "Targeted networks (wifi, mobile or all)"
-        }, {
-            "name": "scheduling",
-            "example": "\"no\"",
-            "desc": "Whether scheduling is wanted"
+            "example": "\"all\" or [\"mobile\", \"wifi\"]",
+            "desc": "Targeted networks"
         }, {
             "name": "devices",
-            "example": "[]",
-            "desc": ""
+            "example": "[{ type: \"include\", name: \"Nexus 4\"}, ...]",
+            "desc": "Device inclusion/exclusion list"
         }, {
             "name": "countries",
-            "example": "[]",
-            "desc": ""
+            "example": "[{ type: \"include\", name: \"Germany\"}, ...]",
+            "desc": "Country inclusion/exclusion list"
         }, {
             "name": "name",
             "example": "\"Test campaign\"",
-            "desc": ""
+            "desc": "Campaign name"
         }, {
             "name": "description",
-            "example": "\"asd\"",
-            "desc": ""
+            "example": "\"example\"",
+            "desc": "Campaign description"
         }, {
             "name": "category",
             "example": "\"Automotive\"",
-            "desc": ""
+            "desc": "Campaign category"
         }, {
             "name": "dailyBudget",
             "example": "\"10\"",
-            "desc": ""
+            "desc": "Daily budget in USD"
         }, {
             "name": "bid",
             "example": "\"10\"",
-            "desc": ""
+            "desc": "Target campaign bid in USD"
         }, {
             "name": "startDate",
             "example": 1389185754317,
-            "desc": ""
+            "desc": "Start execution date"
         }, {
             "name": "endDate",
             "example": 1390827354319,
-            "desc": ""
-        }],
-        "attrs": []
+            "desc": "End execution date"
+        }]
     },
 
     "delete": {
@@ -260,29 +213,6 @@
         }],
         "attrs": []
     },
-
-  "stats": {
-    "title": "Campaign stats for a specific period of time",
-    "route": "GET /api/v1/campaigns/stats/:id/:stat/:range",
-    "args": [
-      {
-        "name": "id",
-        "example": "\"52e653e1d7803e7b56000005\"",
-        "desc": "Hexadecimal ID"
-      },
-      {
-        "name": "stat",
-        "example": "\"clicks\"",
-        "desc": "Type of statistics"
-      },
-      {
-        "name": "range",
-        "example": "\"52e653e1d7803e7b56000005\"",
-        "desc": "Temporal range"
-      }
-    ],
-    "attrs": []
-  },
 
     "activate": {
         "title": "Activate campaign",
