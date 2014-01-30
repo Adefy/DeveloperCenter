@@ -1,0 +1,39 @@
+!= partial("../_shared/head")
+body
+  != partial("../_shared/header")
+  .main
+    .container.no-sidebar: .content
+      .col3.doc_menu
+        h4 Classes
+        ul
+          each klass, slug in public.docs._data
+           li: a(href=slug)= slug
+
+        h4 Methods
+        ul
+          each def in functions
+            li: a(href="##{def.name}")= def.name
+      .col9.push3
+        h1= current.source
+
+        h5 Defined in: #{filename}
+
+        if parent_class
+          h5 
+            | Inherits: 
+            a(href=parent_class)= parent_class
+
+        each par in description
+          p= par
+
+        hr
+
+        h3 Methods
+        each def in functions
+          .method
+            h4(id=def.name) #{def.name}(#{def.params.map(function(p) { return p.name }).join(", ")})
+            each par in def.description
+              p= par
+
+    != partial("../_shared/sidebar")
+  != partial("../_shared/footer")
