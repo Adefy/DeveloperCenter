@@ -1,7 +1,14 @@
 .sidebar
   ul
     li(class="#{ current.path[0] == 'docs' ? 'active' : '' }")
-      a(href="/docs/AJS") Library documentation
+      a(href="/docs/AJS") Library Documentation
+    li(class="#{ current.path[0] == 'api' ? 'active' : '' }")
+      a(href="/api") API Documentation
+      //ul
+      //  li: a(href="#") Accounts
+      //  li: a(href="#") Account
+      //  li: a(href="#") Engines
+      //  li: a(href="#") Group Positions
     li(class="#{ current.path[0] == 'tutorials' ? 'active' : '' }")
       a(href="/tutorials") Tutorials
       //ul
@@ -13,12 +20,5 @@
       a(href="/demos") Tech demos
     li(class="#{ current.path[0] == 'sdk' ? 'active' : '' }")
       a(href="/sdk") SDK
-    li(class="#{ current.path[0] == 'api' ? 'active' : '' }")
-      a(href="/api") API
-      //ul
-      //  li: a(href="#") Accounts
-      //  li: a(href="#") Account
-      //  li: a(href="#") Engines
-      //  li: a(href="#") Group Positions
     li(class="#{ current.path[0] == 'design' ? 'active' : '' }")
       a(href="/design") Design documents
