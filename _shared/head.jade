@@ -17,7 +17,11 @@ html(lang="en")
   meta(property="og:url", content="https://www.adefy.com")
   meta(property="og:description", content="Adefy delivers native, non-intrusive loadscreen ads optimized for the mobile experience.")
 
-  link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+  | <!--[if IE]>
+  link(rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon")
+  | <![endif]-->
+
+  link(rel="icon" href="/img/favicon.png" type="image/png")
 
   link(rel="stylesheet", href='//fonts.googleapis.com/css?family=Gudea:400,700,400italic|Oleo+Script')
   link(rel="stylesheet", href='/fonts/ss-standard.css')
