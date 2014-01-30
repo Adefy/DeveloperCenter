@@ -479,7 +479,7 @@ $container_margin: 0; // auto|px|%  //
   margin: 2.5rem 0;
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(0,0,0,.05);
-  h4 { margin-bottom: .875rem }
+  h4 { margin-bottom: .875rem; color: #33b5e5 }
   h5 { margin-bottom: .750rem }
 
   ul {
@@ -489,10 +489,10 @@ $container_margin: 0; // auto|px|%  //
 
     ul { margin-left: 1.5rem}
   }
-  .name {
+  .name, .params {
     color: #414141;
   }
-  .type { color: #858585}
+  .type { color: #858585 }
 
   *:last-child {
     margin-bottom: 0;

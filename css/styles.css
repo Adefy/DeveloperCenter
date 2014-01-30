@@ -810,7 +810,8 @@ div.search-center {
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
   .method h4 {
-    margin-bottom: 0.875rem; }
+    margin-bottom: .875rem;
+    color: #33b5e5; }
   .method h5 {
     margin-bottom: 0.75rem; }
   .method ul {
@@ -819,7 +820,7 @@ div.search-center {
     margin-bottom: 1rem; }
     .method ul ul {
       margin-left: 1.5rem; }
-  .method .name {
+  .method .name, .method .params {
     color: #414141; }
   .method .type {
     color: #858585; }
