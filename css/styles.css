@@ -821,6 +821,8 @@ div.search-center {
       margin-left: 1.5rem; }
   .method .name {
     color: #414141; }
+  .method .type {
+    color: #858585; }
   .method *:last-child {
     margin-bottom: 0; }
 

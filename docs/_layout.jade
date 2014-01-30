@@ -31,7 +31,10 @@ body
         h3 Methods
         each def in functions
           .method
-            h4(id=def.name) (#{def.return && def.return.type || "void"}) #{def.is_class_method ? "@" : ""}#{def.name}(#{def.params.map(function(p) { return p.name }).join(", ")})
+            h4(id=def.name) 
+              span.type (#{def.return && def.return.type || "void"})
+              span &nbsp;
+              | #{def.is_class_method ? "@" : ""}#{def.name}(#{def.params.map(function(p) { return p.name }).join(", ")})
             each par in def.description
               p= par
 
