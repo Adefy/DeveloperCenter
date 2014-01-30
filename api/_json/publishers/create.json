@@ -1,0 +1,29 @@
+[
+  {
+    "apikey": "5OgP5kvob4HyaE1UXrpN0Re0",
+    "name": "MyApp",
+    "preferredPricing": "CPM",
+    "minimumCPC": 0,
+    "minimumCPM": 20,
+    "active": true,
+    "approvalMessage": [],
+    "status": 2,
+    "thumbURL": "",
+    "category": "Health & Fitness",
+    "description": "",
+    "url": "com.my.app",
+    "id": "52e3fe494abb3d0f5100000f",
+    "stats": {
+      "clicks": 0,
+      "impressions": 0,
+      "earnings": 0,
+      "requests": 0,
+      "ctr": 0,
+      "impressions24h": 0,
+      "clicks24h": 0,
+      "ctr24h": 0,
+      "earnings24h": 0,
+      "requests24h": 0
+    }
+  }
+]

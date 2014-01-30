@@ -76,42 +76,15 @@
         "route": "GET /api/v1/publishers",
         "args": [],
         "attrs": [{
-            "name": {
-                "apikey": "5OgP5kvob4HyaE1UXrpN0Re0",
-                "name": "MyApp",
-                "preferredPricing": "CPM",
-                "minimumCPC": 0,
-                "minimumCPM": 20,
-                "type": 0,
-                "active": true,
-                "approvalMessage": [],
-                "status": 2,
-                "thumbURL": "",
-                "category": "Health & Fitness",
-                "description": "",
-                "url": "com.my.app",
-                "id": "52e3fe494abb3d0f5100000f",
-                "stats": {
-                    "clicks": 0,
-                    "impressions": 0,
-                    "earnings": 0,
-                    "requests": 119804,
-                    "ctr": 0,
-                    "impressions24h": 0,
-                    "clicks24h": 0,
-                    "ctr24h": 0,
-                    "earnings24h": 0,
-                    "requests24h": 37350
-                }
-            },
-            "example": "\"\"",
-            "desc": ""
+            "name": "Publishers",
+            "example": "[{ name: \"\", ...}, {...}, ...]",
+            "desc": "Owned publisher list"
         }]
     },
 
     "create": {
         "title": "Create a new app",
-        "route": "GET /api/v1/publishers/:id",
+        "route": "POST /api/v1/publishers/:id",
         "args": [
           {
             "name": "id",
@@ -138,10 +111,6 @@
         }, {
             "name": "minimumCPM",
             "example": 20,
-            "desc": ""
-        }, {
-            "name": "type",
-            "example": 0,
             "desc": ""
         }, {
             "name": "active",
@@ -206,10 +175,6 @@
             "example": 20,
             "desc": "Minimum CPM"
         }, {
-            "name": "type",
-            "example": 0,
-            "desc": ""
-        }, {
             "name": "category",
             "example": "\"Health & Fitness\"",
             "desc": "Category"
@@ -226,7 +191,7 @@
     },
 
     "delete": {
-        "title": "Delete an app",
+        "title": "Delete a publisher",
         "route": "DELETE /api/v1/publishers/:id",
         "args": [{
             "name": "id",
@@ -238,7 +203,7 @@
     },
 
     "approve": {
-        "title": "Request approval for app",
+        "title": "Request approval for publisher",
         "route": "POST /api/v1/publishers/:id/approve",
         "args": [{
             "name": "id",
@@ -248,31 +213,8 @@
         "attrs": []
     },
 
-    "stats": {
-    "title": "App stats for a specific period of time",
-    "route": "GET /api/v1/publishers/stats/:id/:stat/:range",
-    "args": [
-        {
-            "name": "id",
-            "example": "\"52e653e1d7803e7b56000005\"",
-            "desc": "Hexadecimal ID"
-        },
-        {
-            "name": "stat",
-            "example": "\"clicks\"",
-            "desc": "Type of statistics"
-        },
-        {
-            "name": "range",
-            "example": "\"52e653e1d7803e7b56000005\"",
-            "desc": "Temporal range"
-        }
-        ],
-    "attrs": []
-    },
-
     "activate": {
-        "title": "Activate publishers",
+        "title": "Activate publisher",
         "route": "POST /api/v1/publishers/:id/activate",
         "args": [{
             "name": "id",
@@ -283,7 +225,7 @@
     },
 
     "deactivate": {
-        "title": "Deactivate publishers",
+        "title": "Deactivate publisher",
         "route": "POST /api/v1/publishers/:id/deactivate",
         "args": [{
             "name": "id",
