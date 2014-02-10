@@ -29,6 +29,10 @@ $container_margin:  auto; // auto|px|%  //
   }
 }
 
+em {
+  font-weight: bold;
+}
+
 .sidebar {
   padding: 2rem;
 
@@ -190,6 +194,10 @@ $container_margin:  3.2%; // auto|px|%  //
     display:block;
   }
 	padding: 60px 0;
+
+  &.no-pad {
+    padding: 0;
+  }
 
 	.columns {
 		@include clearfix();

@@ -1,0 +1,140 @@
+.container
+  .content.no-pad
+    .col16
+      h1 Android SDK integration
+
+      h3 First, a short note
+      p Adefy ads are designed to run for specific periods of time, varying with each individual ad. Some ads are short, others are long. Some have a static end state, others must close at a specific time.
+      p
+        | This variability means you must specify the "optimal" length of an ad for your inventory, and we'll do our best to get as close to that length as possible. If an ad finishes before your load process does, and it does not have a static end-state, it 
+        em will 
+        | close! So you should display a load/splash screen of your own, on the off-chance that the ad exits prematurely. Since Adefy ads are displayed in seperate activities, they reveal their host activities when they close.
+
+      h3 There are two main methods of integration. You can either make a direct request, loading and serving the ad at once, or you can load and save ads for later serving.
+    .col12
+      p To load and launch a loadscreen ad in a single call, build an intent for an AdefyScene. Pass it your publisher API key, along with a requested loadscreen length, and start the activity (we'll get to more options at the end):
+      .editor(style="height:100px")
+        | Intent adIntent = new Intent(getApplicationContext(), AdefyScene.class);
+        | adIntent.putExtra("apiKey", "xxxxxxxxxxxxxxxx");
+        | adIntent.putExtra("estimatedLength", 6);
+        | startActivity(adIntent);
+
+  br
+
+  .content.no-pad
+    .col12
+      p You an also fetch ads using the AdefyDownloader, and store them under specific names. To use a pre-fetched ad, pass the name of it to an AdefyScene intent. You can pre-load as many ads as you like, caching them for later usage (very helpful for splash screens), but take note that they are stored in the devices' cache directory.
+      p Therefore, there is no gaurantee that the ads will be available on the next launch of your application (although it is very likely). Always check for the existence of pre-fetched ads before passing them to the AdefyScene, otherwise the launch may fail.
+      .editor(style="height:500px")
+        | // All fetching should happen off of the UI thread! Run the downloader
+        | // in an AsyncTask
+        | new AsyncTask<Void, Void, Void>() {
+        |   @Override
+        |   protected Void doInBackground(Void... voids) {
+        | 
+        |     // Create a new instance of the downloader with your API key
+        |     AdefyDownloader adDownloader = new AdefyDownloader(getApplicationContext(), "xxxxxxxxxxxxxxxx");
+        | 
+        |     // Download as many ads as you like, storing them under unique keys
+        |     // The second parameter is the requested duration of the ad in seconds
+        |     adDownloader.fetchAd("adefy-ad-1", 5);
+        |     adDownloader.fetchAd("adefy-ad-2", 3);
+        |     adDownloader.fetchAd("adefy-ad-3", 8);
+        | 
+        |     // NOTE: The downloads above happen synchronously. To speed things
+        |     //       up, spread multiple downloads up into multiple AsyncTasks
+        | 
+        |     // Launch a new AdefyScene with a stored ad.
+        |     // The ad is consumed, so trying to use the same ad twice will fail.
+        |     Intent adIntent = new Intent(getApplicationContext(), AdefyScene.class);
+        |     adIntent.putExtra("adName", "adefy-ad-1");
+        |     startActivity(adIntent);
+        | 
+        |     return null;
+        |   }
+        | }.execute();
+
+  br
+
+  .content.no-pad
+    .col12
+      h3 Notify the SDK when your load process finishes
+      p Once you are ready to bring your user back to your application, send a signal to close all open AdefyScenes (note: you may only launch one ad at a time). The scenes will terminate at the first possible oppertunity, often immediately after receiving the signal.
+      .editor(style="height:50px")
+        | // Notify the ad we are ready to continue
+        | AdefyScene.requestClose();
+
+  br
+
+  .content.no-pad
+    .col12
+      h3 For the picky ones, you can specify a little more detail
+      p When requesting an ad of any format, you may provide extra information to fine-tune the final deliverable. When fetching an ad through the scene, provide arguments as extra parameters on the intent. If fetching ads manually, you need to provide a JSON object with key/value pairs to the downloader.
+      p In either case, the available parameters are identical. Some options override your Publisher settings in the platform (floor limit, category, etc), while others are uniquely set through the SDK.
+      p
+        em All values need to be passed as strings!
+      .editor(style="height:900px")
+        | //
+        | // Specify options as intent extras when relying on the AdefyScene to
+        | // perform the fetch
+        | //
+        | Intent adIntent = new Intent(getApplicationContext(), AdefyScene.class);
+        | 
+        | // Generic options
+        | adIntent.putExtra("apiKey", "xxxxxxxxxxxxxxxx");
+        | adIntent.putExtra("estimatedLength", 4);
+        | 
+        | // Platform overrides
+        | adIntent.putExtra("category", "Automotive");
+        | adIntent.putExtra("floorCPM", "1.20");
+        | adIntent.putExtra("floorCPC", "0.50");
+        | adIntent.putExtra("pricing", "CPM");
+        | 
+        | // The only options here for now are "physics" and "nophysics"
+        | // Default is "physics", which implies "any"
+        | adIntent.putExtra("type", "physics");
+        | 
+        | // Many more options specific to organic functionality will be
+        | // available here later this year.
+        | startActivity(adIntent);
+        | 
+        | //
+        | // Passing the same options when manually fetching an ad
+        | //
+        | 
+        | new AsyncTask<Void, Void, Void>() {
+        |   @Override
+        |   protected Void doInBackground(Void... voids) {
+        | 
+        |     try {
+        |       
+        |       // Pass options as values on a JSON object, including the API key
+        |       JSONObject options = new JSONObject();
+        |       options.put("apiKey", "xxxxxxxxxxxxxxxx");
+        |       options.put("category", "Automotive");
+        |       // ...
+        | 
+        |       AdefyDownloader adDownloader = new AdefyDownloader(getApplicationContext(), options);
+        |       adDownloader.fetchAd("ad-with-options");
+        | 
+        |       Intent adIntent = new Intent(getApplicationContext(), AdefyScene.class);
+        |       adIntent.putExtra("adName", "ad-with-options");
+        |       startActivity(adIntent);
+        | 
+        |     } catch (JSONException e) {
+        |       e.printStackTrace();
+        |     }
+        | 
+        |     return null;
+        |   }
+        | }.execute();
+
+script.
+  $(document).on("ready", function() {
+    $(".editor").each(function(i, editor) {
+      var editor = ace.edit(editor);
+      editor.getSession().setMode("ace/mode/java");
+      editor.setTheme("ace/theme/tomorrow");
+      editor.setReadOnly(true);
+    });
+  });
