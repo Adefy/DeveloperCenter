@@ -864,6 +864,14 @@ div.center {
       padding-right: 0;
       border-right: none; }
 
+.inset {
+  border-left: 4px solid #0099cc;
+  padding: 16px;
+  background-color: #eee; }
+
+h3.multiline {
+  line-height: 1.5 !important; }
+
 header {
   background-color: #0a242e;
   line-height: 82px;

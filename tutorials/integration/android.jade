@@ -1,7 +1,12 @@
 .container
   .content.no-pad
-    .col16
+    .col12
       h1 Android SDK integration
+
+      p.inset
+        | Grab our android library 
+        a(href="/sdks/adefy-android-v1.0.aar" target="_blank") here. 
+        | It includes JBox2D v2.2.1.1, so you don't need to include it seperately if you are already using it.
 
       h3 First, a short note
       p Adefy ads are designed to run for specific periods of time, varying with each individual ad. Some ads are short, others are long. Some have a static end state, others must close at a specific time.
@@ -10,8 +15,33 @@
         em will 
         | close! So you should display a load/splash screen of your own, on the off-chance that the ad exits prematurely. Since Adefy ads are displayed in seperate activities, they reveal their host activities when they close.
 
-      h3 There are two main methods of integration. You can either make a direct request, loading and serving the ad at once, or you can load and save ads for later serving.
+      h3 Add the AAR to your gradle config
+      p Android handles local AAR libs poorly; you will need to specify a local folder as a local maven repo, then include the AAR from there.
+      p An example build.config:
+      .editor(style="height:300px")
+        | apply plugin: 'android'
+        | 
+        | android {
+        |   ...
+        | }
+        | 
+        | repositories {
+        |     mavenCentral()
+        |     flatDir {
+        |         dirs '../AdefyLib/build/libs'
+        |     }
+        | }
+        | 
+        | dependencies {
+        |     ...
+        |     compile 'com.sit.adefy:AdefyLib:1.0@aar'
+        | }
+
+  br
+
+  .content.no-pad
     .col12
+      h3 The simplest fetch
       p To load and launch a loadscreen ad in a single call, build an intent for an AdefyScene. Pass it your publisher API key, along with a requested loadscreen length, and start the activity (we'll get to more options at the end):
       .editor(style="height:100px")
         | Intent adIntent = new Intent(getApplicationContext(), AdefyScene.class);
@@ -53,6 +83,22 @@
         |     return null;
         |   }
         | }.execute();
+
+  br
+
+  .content.no-pad
+    .col12
+      h3 Update the load bar, keep your users informed
+      p While the loaded ad is not gauranteed to have a loading bar per se, it will always have some sort of loading indicator. Whether a spinner, phasing orb, or generic rectangular loading bar, users always have an indication that something is happening.
+      p You can deal with this indicator in one of two ways; either let the ad manually adjust it (orbs phase, spinners spin, loading bars oscillate slowly), or supply absolute percentages. The percentage will be interpreted as an angle of rotation for spinners, and an opacity for orbs:
+      .editor(style="height:150px")
+        | // The default; automatic load element handling
+        | AdefyScene.setLoadPercentage(null);
+        | 
+        | // Manual percentage handling (update this as often as possible!)
+        | //
+        | // Progress is interpreted as a value between 0 and 1!
+        | AdefyScene.setLoadPercentage(0.4);
 
   br
 
@@ -128,6 +174,14 @@
         |     return null;
         |   }
         | }.execute();
+
+  br
+
+  .content.no-pad
+    .col12
+      p.inset
+        | In case you missed it, grab our android sdk 
+        a(href="/sdks/adefy-android-v1.0.aar" target="_blank") here. 
 
 script.
   $(document).on("ready", function() {

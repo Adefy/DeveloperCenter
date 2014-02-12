@@ -1,41 +1,32 @@
-h1 SDKs
-h3 Android &amp; iOS SDKs are in development, and will be ready early February 2014
+h1 SDK Downloads
+h3.multiline Grab our Android SDK and start serving Adefy ads in your application! We're working on an iOS SDK to be released mid 2014.
 
-//- div
-  h1 SDK Downloads
-  h3 Grab our Android SDK and start serving Adefy ads in your application! We're working on an iOS SDK, and it'll be out mid-2014
+hr
 
-  hr
+.versions
+  //-.version
+    .logo
+      .img: img(src="/img/sdk_apple.png" data-at2x="/img/sdk_apple@2x.png")
+      .link: a(href="#") iOS version
+    h5 Description
+    p This is the URL location where the resource can be found. This will be used by Tinypass to ensure that users have a method to get back to their content following a successful purchase. Perhaps you run a daily news site where you sell individual articles as well as access to an entire section of premium content.
 
-  .versions
-    //-.version
-      .logo
-        .img: img(src="/img/sdk_apple.png" data-at2x="/img/sdk_apple@2x.png")
-        .link: a(href="#") iOS version
-      h5 Description
-      p This is the URL location where the resource can be found. This will be used by Tinypass to ensure that users have a method to get back to their content following a successful purchase. Perhaps you run a daily news site where you sell individual articles as well as access to an entire section of premium content.
+    p Resource RIDs are the link between you, your content, and the end-user's purchases. When a user completes a purchase, they have effectively bought access to that RID. Casually changing RIDs can have disastrous consequences for your website and your users.
 
-      p Resource RIDs are the link between you, your content, and the end-user's purchases. When a user completes a purchase, they have effectively bought access to that RID. Casually changing RIDs can have disastrous consequences for your website and your users.
+  .version
+    .logo
+      .img: img(src="/img/sdk_android.png" data-at2x="/img/sdk_android@2x.png")
+      .link: a(href="#") Android SDK (.aar)
 
-    .version
-      .logo
-        .img: img(src="/img/sdk_android.png" data-at2x="/img/sdk_android@2x.png")
-        .link: a(href="#") Android SDK (.jar)
-      h5 Description
-      p There are only two states to think about when integrating Tinypass. Either the user has access or they do not have access. When a user does not have access, it is up to the publisher to define the messaging that appears on the access denied landing page that the user will be directed to. Tinypass does not make any assumptions or requirements regarding how this page should be designed or displayed. The style and content of the access denied page is left entirely up to the publisher.
+// split otherwise wouldn't be properly aligned
+.related
+  //-.version
+    h5 Related links
 
-  // split otherwise wouldn't be properly aligned
-  .related
-    //-.version
-      h5 Related links
+    ul.listing
+      li: a(href="#") Integration instructions
+      li: a Documentation
 
-      ul.listing
-        li: a(href="#") Integration instructions
-        li: a Documentation
-
-    .version
-      h5 Related links
-
-      ul.listing
-        li: a(href="#") Integration instructions
-        li: a Documentation
+  .version
+    ul.listing
+      li: a(href="/tutorials/integration/android") Integration instructions
