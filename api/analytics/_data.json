@@ -1,4 +1,43 @@
 {
+  "ads": {
+    "title": "Retrieve analytics for ads",
+    "route": "GET /api/v1/analytics/ads/:id/:stat",
+    "args": [{
+      "name": "id",
+      "example": "\"52e653e1d7803e7b56000005\"",
+      "desc": "Hexadecimal ID"
+    },{
+      "name": "stat",
+      "example": "\"clicks\"",
+      "desc": "Metric"
+    },{
+      "name": "from",
+      "example": "\"-24h\"",
+      "desc": "Relative or absolute point in past"
+    },{
+      "name": "untill",
+      "example": "\"-6h\"",
+      "desc": "Relative or absolute point in past"
+    },{
+      "name": "interval",
+      "example": "\"30minutes\"",
+      "desc": "Interval between data points"
+    },{
+      "name": "sum",
+      "example": "true",
+      "desc": "Return as a sum over time"
+    },{
+      "name": "total",
+      "example": "true",
+      "desc": "Return as a total"
+    }],
+    "attrs": [{
+      "name": "data",
+      "example": "[{ x: 1391043120000, y: 100 }, ...]",
+      "desc": "Data points"
+    }]
+  },
+
   "publishers": {
     "title": "Retrieve analytics for publishers",
     "route": "GET /api/v1/analytics/publishers/:id/:stat",
@@ -6,13 +45,36 @@
       "name": "id",
       "example": "\"52e653e1d7803e7b56000005\"",
       "desc": "Hexadecimal ID"
-    },
-    {
+    },{
       "name": "stat",
       "example": "\"clicks\"",
-      "desc": "Type of statistics"
+      "desc": "Metric"
+    },{
+      "name": "from",
+      "example": "\"-24h\"",
+      "desc": "Relative or absolute point in past"
+    },{
+      "name": "untill",
+      "example": "\"-6h\"",
+      "desc": "Relative or absolute point in past"
+    },{
+      "name": "interval",
+      "example": "\"30minutes\"",
+      "desc": "Interval between data points"
+    },{
+      "name": "sum",
+      "example": "true",
+      "desc": "Return as a sum over time"
+    },{
+      "name": "total",
+      "example": "true",
+      "desc": "Return as a total"
     }],
-    "attrs": []
+    "attrs": [{
+      "name": "data",
+      "example": "[{ x: 1391043120000, y: 100 }, ...]",
+      "desc": "Data points"
+    }]
   },
 
   "campaigns": {
@@ -22,23 +84,70 @@
       "name": "id",
       "example": "\"52e653e1d7803e7b56000005\"",
       "desc": "Hexadecimal ID"
-    },
-    {
+    },{
       "name": "stat",
       "example": "\"clicks\"",
-      "desc": "Type of statistics"
+      "desc": "Metric"
+    },{
+      "name": "from",
+      "example": "\"-24h\"",
+      "desc": "Relative or absolute point in past"
+    },{
+      "name": "untill",
+      "example": "\"-6h\"",
+      "desc": "Relative or absolute point in past"
+    },{
+      "name": "interval",
+      "example": "\"30minutes\"",
+      "desc": "Interval between data points"
+    },{
+      "name": "sum",
+      "example": "true",
+      "desc": "Return as a sum over time"
+    },{
+      "name": "total",
+      "example": "true",
+      "desc": "Return as a total"
     }],
-    "attrs": []
+    "attrs": [{
+      "name": "data",
+      "example": "[{ x: 1391043120000, y: 100 }, ...]",
+      "desc": "Data points"
+    }]
   },
 
   "totals": {
-    "title": "Retrieve analytics totals",
+    "title": "Retrieve metric totals across an account",
     "route": "GET /api/v1/analytics/totals/:stat",
     "args": [{
       "name": "stat",
       "example": "\"clicks\"",
-      "desc": "Type of statistics"
+      "desc": "Metric"
+    },{
+      "name": "from",
+      "example": "\"-24h\"",
+      "desc": "Relative or absolute point in past"
+    },{
+      "name": "untill",
+      "example": "\"-6h\"",
+      "desc": "Relative or absolute point in past"
+    },{
+      "name": "interval",
+      "example": "\"30minutes\"",
+      "desc": "Interval between data points"
+    },{
+      "name": "sum",
+      "example": "true",
+      "desc": "Return as a sum over time"
+    },{
+      "name": "total",
+      "example": "true",
+      "desc": "Return as a total"
     }],
-    "attrs": []
+    "attrs": [{
+      "name": "data",
+      "example": "[{ x: 1391043120000, y: 100 }, ...]",
+      "desc": "Data points"
+    }]
   }
 }

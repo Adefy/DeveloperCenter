@@ -1,0 +1,9 @@
+h1 API
+
+ul.listing
+  each data, folder in public.api
+    if (data._data)
+      each page, slug in data._data
+        li
+          a(href="/api/#{folder}/#{slug}")= page.route
+          p= page.title

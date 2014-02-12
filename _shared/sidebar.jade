@@ -1,24 +1,24 @@
 .sidebar
   ul
     li(class="#{ current.path[0] == 'docs' ? 'active' : '' }")
-      a(href="/docs/AJS") Library documentation
+      a(href="/docs/AJS") Library Documentation
+    li(class="#{ current.path[0] == 'api' ? 'active' : '' }")
+      a(href="/api/") API Documentation
+      //ul
+      //  li: a(href="#") Accounts
+      //  li: a(href="#") Account
+      //  li: a(href="#") Engines
+      //  li: a(href="#") Group Positions
     li(class="#{ current.path[0] == 'tutorials' ? 'active' : '' }")
-      a(href="/tutorials") Tutorials
-      ul
-        li: a(href="#") Accounts
-        li: a(href="#") Account
-        li: a(href="#") Engines
-        li: a(href="#") Group Positions
+      a(href="/tutorials/") Tutorials
+      //ul
+      //  li: a(href="#") Accounts
+      //  li: a(href="#") Account
+      //  li: a(href="#") Engines
+      //  li: a(href="#") Group Positions
     li(class="#{ current.path[0] == 'demos' ? 'active' : '' }")
-      a(href="/demos") Tech demos
+      a(href="/demos/") Tech demos
     li(class="#{ current.path[0] == 'sdk' ? 'active' : '' }")
       a(href="/sdk") SDK
-    li(class="#{ current.path[0] == 'api' ? 'active' : '' }")
-      a(href="/api") API
-      ul
-        li: a(href="#") Accounts
-        li: a(href="#") Account
-        li: a(href="#") Engines
-        li: a(href="#") Group Positions
-    li: a(href="#") Design documents
-    li( class="#{ current.source == 'contact' ? 'active' : '' }"): a(href="/contact") Contact form
+    li(class="#{ current.path[0] == 'design' ? 'active' : '' }")
+      a(href="/design") Design documents

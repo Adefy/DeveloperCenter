@@ -26,10 +26,6 @@
           "example": 0,
           "desc": "A numeric value representing the ad state"
       }, {
-          "name": "data",
-          "example": "\"\"",
-          "desc": ""
-      }, {
           "name": "id",
           "example": "\"52e653e1d7803e7b56000005\"",
           "desc": "Hexadecimal ID"
@@ -43,46 +39,11 @@
       "title": "Retrieve all ads",
       "route": "GET /api/v1/ads",
       "args": [],
-      "attrs": [
-        {
-        "name": {
-            "name": "Cookies",
-            "campaigns": [],
-            "approvalMessage": [],
-            "status": 0,
-            "data": "",
-            "id": "52e400b30af4620b51000005",
-            "stats": {
-                "requests": 200,
-                "clicks": 3,
-                "impressions": 50,
-                "spent": 300,
-                "ctr": 0
-            }
-        },
-        "example": "\"\"",
-        "desc": ""
-      }, 
-      {
-        "name": {
-            "name": "Test",
-            "campaigns": [],
-            "approvalMessage": [],
-            "status": 0,
-            "data": "",
-            "id": "52e653e1d7803e7b56000005",
-            "stats": {
-                "requests": 0,
-                "clicks": 0,
-                "impressions": 0,
-                "spent": 0,
-                "ctr": 0
-            }
-        },
-        "example": "\"\"",
-        "desc": ""
-      }
-    ]
+      "attrs": [{
+        "name": "Ads",
+        "example": "[{ name: \"\", ...}, {...}, ...]",
+        "desc": "Owned ads list"
+      }]
   },
   "delete": {
       "title": "Delete an ad",
@@ -119,17 +80,9 @@
           "example": 0,
           "desc": "A numeric value representing the ad state"
       }, {
-          "name": "data",
-          "example": "\"\"",
-          "desc": ""
-      }, {
           "name": "id",
           "example": "\"52e653e1d7803e7b56000005\"",
           "desc": "Hexadecimal ID"
-      }, {
-          "name": "stats",
-          "example": "{\"requests\": 50, \"clicks\": 3, ... }",
-          "desc": "A hash object containing numeric statistics"
       }]
   },
 
@@ -141,29 +94,6 @@
       "example": "\"52e653e1d7803e7b56000005\"",
       "desc": "Hexadecimal ID"
     }],
-    "attrs": []
-  },
-
-  "stats": {
-    "title": "Ad stats for a specific period of time",
-    "route": "GET /api/v1/ads/stats/:id/:stat/:range",
-    "args": [
-      {
-        "name": "id",
-        "example": "\"52e653e1d7803e7b56000005\"",
-        "desc": "Hexadecimal ID"
-      },
-      {
-        "name": "stat",
-        "example": "\"clicks\"",
-        "desc": "Type of statistics"
-      },
-      {
-        "name": "range",
-        "example": "\"52e653e1d7803e7b56000005\"",
-        "desc": "Temporal range"
-      }
-    ],
     "attrs": []
   }
 }

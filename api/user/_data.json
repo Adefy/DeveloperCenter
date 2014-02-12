@@ -14,24 +14,19 @@
           "desc": "Username used for login"
       },
       {
-          "name": "version",
-          "example": 1,
-          "desc": ""
-      },
-      {
-          "name": "pendingDeposit",
-          "example": "",
-          "desc": ""
-      },
-      {
           "name": "transactions",
           "example": [],
-          "desc": ""
+          "desc": "A list of transactions"
       },
       {
-          "name": "funds",
+          "name": "adFunds",
           "example": 100000,
-          "desc": "Funds on the account, in dollars"
+          "desc": "Advertising credit on the account, in USD"
+      },
+      {
+          "name": "pubFunds",
+          "example": 100000,
+          "desc": "Publisher revenue on the account, in USD"
       },
       {
           "name": "vat",
@@ -117,12 +112,12 @@
       {
           "name": "country",
           "example": "Canada",
-          "desc": ""
+          "desc": "Country"
       },
       {
           "name": "postalCode",
           "example": "30110",
-          "desc": ""
+          "desc": "Postal code"
       },
       {
           "name": "state",
@@ -157,6 +152,9 @@
     "title": "Get a list of transactions",
     "route": "GET /api/v1/user/transactions",
     "args": [],
-    "attrs": []
+    "attrs": [{
+        "name": "transactions",
+        "example": "[{ \"action\": \"deposit\", \"amount\": 10000, \"time\": 1389291703173 }, ...]"
+      }]
   }
 }
