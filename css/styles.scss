@@ -73,6 +73,16 @@ div.center {
   }
 }
 
+.inset {
+  border-left: 4px solid #0099cc;
+  padding: 16px;
+  background-color: #eee;
+}
+
+h3.multiline {
+  line-height: 1.5 !important;
+}
+
 header {
   background-color: #0a242e;
   //padding: 25px 0 10px;

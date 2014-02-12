@@ -143,6 +143,8 @@ ul.listing, ol.listing {
     padding: 15px;
     border-bottom: 1px solid #e8e8e8;
     -webkit-column-break-inside: avoid; }
+    ul.listing li.no-border, ol.listing li.no-border {
+      border-bottom: none; }
   ul.listing.small li, ol.listing.small li {
     font-size: 14px; }
   ul.listing p, ol.listing p {
@@ -264,6 +266,9 @@ i {
     margin-right: -100%;
     width: 25%;
     margin-left: 75%; }
+
+em {
+  font-weight: bold; }
 
 .sidebar {
   padding: 2rem; }
@@ -523,6 +528,8 @@ div.search-center {
     content: "";
     clear: both;
     display: block; }
+  .content.no-pad {
+    padding: 0; }
   .content .columns {
     overflow: hidden;
     *zoom: 1; }
@@ -856,6 +863,14 @@ div.center {
     .language a:last-of-type {
       padding-right: 0;
       border-right: none; }
+
+.inset {
+  border-left: 4px solid #0099cc;
+  padding: 16px;
+  background-color: #eee; }
+
+h3.multiline {
+  line-height: 1.5 !important; }
 
 header {
   background-color: #0a242e;

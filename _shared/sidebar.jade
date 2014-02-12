@@ -1,5 +1,7 @@
 .sidebar
   ul
+    li(class="#{ current.path[0] == 'index' ? 'active' : '' }")
+      a(href="/") Home
     li(class="#{ current.path[0] == 'docs' ? 'active' : '' }")
       a(href="/docs/AJS") Library Documentation
     li(class="#{ current.path[0] == 'api' ? 'active' : '' }")
