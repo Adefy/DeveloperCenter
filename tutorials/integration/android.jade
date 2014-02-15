@@ -184,11 +184,9 @@
         a(href="/sdks/adefy-android-v1.0.aar" target="_blank") here. 
 
 script.
-  $(document).on("ready", function() {
-    $(".editor").each(function(i, editor) {
-      var editor = ace.edit(editor);
-      editor.getSession().setMode("ace/mode/java");
-      editor.setTheme("ace/theme/tomorrow");
-      editor.setReadOnly(true);
-    });
+  $(".editor").each(function(i, editor) {
+    var editor = ace.edit(editor);
+    editor.getSession().setMode("ace/mode/java");
+    editor.setTheme("ace/theme/tomorrow");
+    editor.setReadOnly(true);
   });
