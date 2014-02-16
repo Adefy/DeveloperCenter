@@ -790,12 +790,8 @@ div.search-center {
     .controls button.rotate, .controls button.scale {
       padding: 6px; }
 
-.preview {
-  height: 440px;
-  line-height: 440px;
-  text-align: center; }
-  .preview img {
-    vertical-align: middle; }
+.preview img {
+  vertical-align: middle; }
 
 .downloads {
   margin-top: 2rem; }
@@ -851,6 +847,14 @@ div.center {
   .menu a:hover {
     text-decoration: none;
     border-bottom-color: rgba(255, 255, 255, 0.2); }
+
+.preview {
+  width: 390px;
+  padding: 51px 45px;
+  background: transparent url(/img/nexus_large.png) no-repeat;
+  background-size: 100% 100%; }
+  .preview canvas {
+    width: 300px; }
 
 .language {
   text-align: right; }

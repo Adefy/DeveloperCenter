@@ -83,21 +83,27 @@ script.
       $('.toggle').removeClass('active').addClass('disabled');
     }
 
-    // Set up single editor
-    if ($('#editor').length > 0 && !$('#editor').hasClass('ace_editor')) {
-      editor = ace.edit("editor");
-      editor.setTheme("ace/theme/tomorrow");
-      editor.getSession().setMode("ace/mode/javascript");
-      editor.setReadOnly($('#editor').hasClass('readonly'));
+    // Set up editors
+    if ($('#editor, .editor').length > 0 && !$('#editor').hasClass('ace_editor')) {
+      $("#editor, .editor").each(function(i, editorElm) {
+        if(!$(editorElm).hasClass("ace_editor")) {
 
-      $('.editor-light').click(function(e) {
-        editor.setTheme("ace/theme/tomorrow");
-        e.preventDefault();
-      });
+          editor = ace.edit($(editorElm)[0]);
+          editor.setTheme("ace/theme/tomorrow");
+          editor.getSession().setMode("ace/mode/javascript");
+          editor.setReadOnly($(editorElm).hasClass('readonly'));
 
-      $('.editor-dark').click(function(e) {
-        editor.setTheme("ace/theme/tomorrow_night");
-        e.preventDefault();
+          $('.editor-light').click(function(e) {
+            editor.setTheme("ace/theme/tomorrow");
+            e.preventDefault();
+          });
+
+          $('.editor-dark').click(function(e) {
+            editor.setTheme("ace/theme/tomorrow_night");
+            e.preventDefault();
+          });
+
+        }
       });
     }
   }
