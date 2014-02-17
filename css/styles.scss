@@ -28,6 +28,10 @@
 @import 'typography';
 @import 'layout';
 
+.tcenter {
+  text-align: center;
+}
+
 $max-width: 1230px;
 
 $total_columns:   12;     //        //
