@@ -28,6 +28,16 @@
 @import 'typography';
 @import 'layout';
 
+.breadcrumbs {
+  margin-top: -16px;
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+
+.tcenter {
+  text-align: center;
+}
+
 $max-width: 1230px;
 
 $total_columns:   12;     //        //
@@ -54,6 +64,39 @@ div.center {
         border-bottom-color: rgba(255,255,255,.2)
       }
     }
+}
+
+.preview {
+  width: 390px;
+  padding: 51px 45px;
+  background: transparent url(/img/nexus_large.jpg) no-repeat;
+  background-size: 100% 100%;
+
+  canvas {
+    width: 300px;
+  }
+}
+
+.preview-landscape {
+  width: 594px;
+  padding: 59px 92px 57px 90px;
+  background: transparent url(/img/nexus_large_landscape.jpg) no-repeat;
+  background-size: 100% 100%;
+
+  canvas {
+    width: 400px;
+  }
+}
+
+.preview-1080 {
+  width: 390px;
+  padding: 51px 45px;
+  background: transparent url(/img/nexus_large.jpg) no-repeat;
+  background-size: 100% 100%;
+
+  canvas {
+    width: 300px;
+  }
 }
 
 .language {

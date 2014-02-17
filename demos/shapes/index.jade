@@ -1,0 +1,71 @@
+.breadcrumbs
+  a(href="/") Home 
+  | &gt; 
+  a(href="/demos") Tech Demos 
+  | &gt; 
+  a(href="/demos/shapes") Shapes!
+
+h1 Shapes!
+h3 ADD A DESCRIPTION
+
+h5 Introduction
+
+p ERMAGERD
+
+hr
+
+.row
+  .col3
+    h3 Scene Code
+.row
+  .col6
+    ul.tabs
+      li: a(href="javascript:void(0)")
+        i.ss-replay
+        | Revert changes
+      li: a#reload-ad(href="javascript:void(0)")
+        i.ss-hdd
+        | Apply changes
+    #editor-logic.editor(style="height: 640px")
+  .col4.push6
+    .preview-1080#shapes-demo
+    .downloads
+      h5 Download demo
+      .col6
+        a(href="#")
+          i.ss-download
+          | PC version via HTML5
+      .col6.push6
+        a(href="https://play.google.com/store/apps/details?id=com.sit.adefy.showcase" target="_blank")
+          i.ss-download
+          | Android Showcase
+
+.row
+  .col3
+    h3 Manifest
+
+.row
+  .col6
+    ul.tabs
+      li: a(href="javascript:void(0)")
+        i.ss-replay
+        | Revert changes
+      li: a.reload-ad(href="javascript:void(0)")
+        i.ss-hdd
+        | Apply changes
+    #editor-manifest.editor(style="height: 100px")
+
+script.
+  var sampleOptions = {
+    logic: "/demos/shapes/ad.js",
+    manifest: "/demos/shapes/manifest.js",
+    adEditor: "editor-logic",
+    manifestEditor: "editor-manifest",
+    parentDiv: "#shapes-demo",
+    width: 1080,
+    height: 1920
+  }
+
+  loadPhoneSample(sampleOptions, function(reload) {
+    $(".reload-ad").click(function() { reload(); });
+  });

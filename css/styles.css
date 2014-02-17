@@ -790,12 +790,8 @@ div.search-center {
     .controls button.rotate, .controls button.scale {
       padding: 6px; }
 
-.preview {
-  height: 440px;
-  line-height: 440px;
-  text-align: center; }
-  .preview img {
-    vertical-align: middle; }
+.preview img {
+  vertical-align: middle; }
 
 .downloads {
   margin-top: 2rem; }
@@ -836,6 +832,14 @@ div.search-center {
   .method *:last-child {
     margin-bottom: 0; }
 
+.breadcrumbs {
+  margin-top: -16px;
+  margin-bottom: 32px;
+  font-size: 14px; }
+
+.tcenter {
+  text-align: center; }
+
 div.center {
   overflow: hidden;
   *zoom: 1;
@@ -851,6 +855,30 @@ div.center {
   .menu a:hover {
     text-decoration: none;
     border-bottom-color: rgba(255, 255, 255, 0.2); }
+
+.preview {
+  width: 390px;
+  padding: 51px 45px;
+  background: transparent url(/img/nexus_large.jpg) no-repeat;
+  background-size: 100% 100%; }
+  .preview canvas {
+    width: 300px; }
+
+.preview-landscape {
+  width: 594px;
+  padding: 59px 92px 57px 90px;
+  background: transparent url(/img/nexus_large_landscape.jpg) no-repeat;
+  background-size: 100% 100%; }
+  .preview-landscape canvas {
+    width: 400px; }
+
+.preview-1080 {
+  width: 390px;
+  padding: 51px 45px;
+  background: transparent url(/img/nexus_large.jpg) no-repeat;
+  background-size: 100% 100%; }
+  .preview-1080 canvas {
+    width: 300px; }
 
 .language {
   text-align: right; }

@@ -1,0 +1,34 @@
+var textures = [{
+  "path": "/demos/assets/watch/bg.png",
+  "name": "bg"
+}, {
+  "path": "/demos/assets/watch/button.png",
+  "name": "button"
+}, {
+  "path": "/demos/assets/watch/watch.png",
+  "name": "watch"
+}, {
+  "path": "/demos/assets/watch/mechanics.png",
+  "name": "mechanics"
+}, {
+  "path": "/demos/assets/watch/face3.png",
+  "name": "face3"
+}, {
+  "path": "/demos/assets/watch/face2.png",
+  "name": "face2"
+}, {
+  "path": "/demos/assets/watch/face1.png",
+  "name": "face1"
+}, {
+  "path": "/demos/assets/watch/pointer3.png",
+  "name": "pointer3"
+}, {
+  "path": "/demos/assets/watch/pointer2.png",
+  "name": "pointer2"
+}, {
+  "path": "/demos/assets/watch/pointer1.png",
+  "name": "pointer1"
+}, {
+  "path": "/demos/assets/watch/text.png",
+  "name": "text"
+}];

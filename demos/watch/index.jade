@@ -1,0 +1,71 @@
+.breadcrumbs
+  a(href="/") Home 
+  | &gt; 
+  a(href="/demos") Tech Demos 
+  | &gt; 
+  a(href="/demos/watch") Watch De-construction
+
+h1 Watch De-construction
+h3 A quality watch is great inside and out. Have a look at the internals of an elegant and precise accessory.
+
+h5 Introduction
+
+p This is a fairly simple example, showing the basics of actor creation and animations with custom control points. Our authoring tools make defining animations simple, allowing anyone to create complex commercial-like scenes.
+
+hr
+
+.row
+  .col3
+    h3 Scene Code
+.row
+  .col6
+    ul.tabs
+      li: a(href="javascript:void(0)")
+        i.ss-replay
+        | Revert changes
+      li: a#reload-ad(href="javascript:void(0)")
+        i.ss-hdd
+        | Apply changes
+    #editor-logic.editor(style="height: 640px")
+  .col4.push6
+    .preview#watch-demo
+    .downloads
+      //- h5 Download demo
+      //- .col6
+        a(href="#")
+          i.ss-download
+          | PC version via HTML5
+      .col12
+        a.tcenter(href="https://play.google.com/store/apps/details?id=com.sit.adefy.showcase" target="_blank")
+          i.ss-download
+          | Android Showcase
+
+.row
+  .col3
+    h3 Manifest
+
+.row
+  .col6
+    ul.tabs
+      li: a(href="javascript:void(0)")
+        i.ss-replay
+        | Revert changes
+      li: a.reload-ad(href="javascript:void(0)")
+        i.ss-hdd
+        | Apply changes
+    #editor-manifest.editor(style="height: 320px")
+
+script.
+  var sampleOptions = {
+    logic: "/demos/watch/ad.js",
+    manifest: "/demos/watch/manifest.js",
+    adEditor: "editor-logic",
+    manifestEditor: "editor-manifest",
+    parentDiv: "#watch-demo",
+    width: 720,
+    height: 1280
+  }
+
+  loadPhoneSample(sampleOptions, function(reload) {
+    $(".reload-ad").click(function() { reload(); });
+  });

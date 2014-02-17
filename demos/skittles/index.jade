@@ -1,0 +1,71 @@
+.breadcrumbs
+  a(href="/") Home 
+  | &gt; 
+  a(href="/demos") Tech Demos 
+  | &gt; 
+  a(href="/demos/skittles") Angry Birds meet Skittles
+
+h1 Angry Birds meet Skittles
+h3 Physics, skittles, and some good 'ol suave marketing.
+
+h5 Introduction
+
+p An absolutely gripping skittles ad; We spawn a few angry birds, drop skittles on them, and animate a riveting message onscreen.
+
+hr
+
+.row
+  .col3
+    h3 Scene Code
+.row
+  .col6
+    ul.tabs
+      li: a(href="javascript:void(0)")
+        i.ss-replay
+        | Revert changes
+      li: a#reload-ad(href="javascript:void(0)")
+        i.ss-hdd
+        | Apply changes
+    #editor-logic.editor(style="height: 640px")
+  .col4.push6
+    .preview#skittles-demo
+    .downloads
+      //- h5 Download demo
+      //- .col6
+        a(href="#")
+          i.ss-download
+          | PC version via HTML5
+      .col12
+        a.tcenter(href="https://play.google.com/store/apps/details?id=com.sit.adefy.showcase" target="_blank")
+          i.ss-download
+          | Android Showcase
+
+.row
+  .col3
+    h3 Manifest
+
+.row
+  .col6
+    ul.tabs
+      li: a(href="javascript:void(0)")
+        i.ss-replay
+        | Revert changes
+      li: a.reload-ad(href="javascript:void(0)")
+        i.ss-hdd
+        | Apply changes
+    #editor-manifest.editor(style="height: 320px")
+
+script.
+  var sampleOptions = {
+    logic: "/demos/skittles/ad.js",
+    manifest: "/demos/skittles/manifest.js",
+    adEditor: "editor-logic",
+    manifestEditor: "editor-manifest",
+    parentDiv: "#skittles-demo",
+    width: 720,
+    height: 1280
+  }
+
+  loadPhoneSample(sampleOptions, function(reload) {
+    $(".reload-ad").click(function() { reload(); });
+  });

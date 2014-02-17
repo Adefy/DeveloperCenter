@@ -1,0 +1,67 @@
+var textures = [{
+  "path": "/demos/assets/car/bg.png",
+  "name": "bg"
+}, {
+  "path": "/demos/assets/car/car.png",
+  "name": "car"
+}, {
+  "path": "/demos/assets/car/left.png",
+  "name": "left"
+}, {
+  "path": "/demos/assets/car/right.png",
+  "name": "right"
+}, {
+  "path": "/demos/assets/car/leftlight.png",
+  "name": "leftlight"
+}, {
+  "path": "/demos/assets/car/rightlight.png",
+  "name": "rightlight"
+}, {
+  "path": "/demos/assets/car/button.png",
+  "name": "button"
+}, {
+  "path": "/demos/assets/car/dot_dark.png",
+  "name": "dot_dark"
+}, {
+  "path": "/demos/assets/car/dot_light.png",
+  "name": "dot_light"
+}, {
+  "path": "/demos/assets/car/C1.png",
+  "name": "C1"
+}, {
+  "path": "/demos/assets/car/O1.png",
+  "name": "O1"
+}, {
+  "path": "/demos/assets/car/N1.png",
+  "name": "N1"
+}, {
+  "path": "/demos/assets/car/C2.png",
+  "name": "C2"
+}, {
+  "path": "/demos/assets/car/R1.png",
+  "name": "R1"
+}, {
+  "path": "/demos/assets/car/E1.png",
+  "name": "E1"
+}, {
+  "path": "/demos/assets/car/T1.png",
+  "name": "T1"
+}, {
+  "path": "/demos/assets/car/E2.png",
+  "name": "E2"
+}, {
+  "path": "/demos/assets/car/P1.png",
+  "name": "P1"
+}, {
+  "path": "/demos/assets/car/R2.png",
+  "name": "R2"
+}, {
+  "path": "/demos/assets/car/O2.png",
+  "name": "O2"
+}, {
+  "path": "/demos/assets/car/O3.png",
+  "name": "O3"
+}, {
+  "path": "/demos/assets/car/F1.png",
+  "name": "F1"
+}];
