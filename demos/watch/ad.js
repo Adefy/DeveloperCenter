@@ -8,27 +8,27 @@ AJS.createRectangleActor(360, 640, 720, 1280)
 watch = AJS.createRectangleActor(410, 385, 626, 977)
 .setTexture("watch").setLayer(1);
 
-mech = AJS.createRectangleActor(350-700, 540+700, 393, 385)
+mech = AJS.createRectangleActor(350 - 700, 540 + 700, 393, 385)
 .setTexture("mechanics").setLayer(2);
 
-face3 = AJS.createRectangleActor(302-700, 461+700, 119, 115)
+face3 = AJS.createRectangleActor(302 - 700, 461 + 700, 119, 115)
 .setTexture("face3").setLayer(3);
-face2 = AJS.createRectangleActor(390-700, 616+700, 118, 111)
+face2 = AJS.createRectangleActor(390 - 700, 616 + 700, 118, 111)
 .setTexture("face2").setLayer(3);
-face1 = AJS.createRectangleActor(352-700, 537+700, 390, 375)
+face1 = AJS.createRectangleActor(352 - 700, 537 + 700, 390, 375)
 .setTexture("face1").setLayer(3);
 
-pointer3 = AJS.createRectangleActor(310-700, 575+700, 86, 101)
+pointer3 = AJS.createRectangleActor(310 - 700, 575 + 700, 86, 101)
 .setTexture("pointer3").setLayer(4);
-pointer2 = AJS.createRectangleActor(295-700, 615+700, 436, 168)
+pointer2 = AJS.createRectangleActor(295 - 700, 615 + 700, 436, 168)
 .setTexture("pointer2").setLayer(5);
-pointer1 = AJS.createRectangleActor(289-700, 493+700, 177, 204)
+pointer1 = AJS.createRectangleActor(289 - 700, 493 + 700, 177, 204)
 .setTexture("pointer1").setLayer(6);
 
 button = AJS.createRectangleActor(620, 100, 133, 134)
 .setTexture("button").setLayer(1);
 
-text = AJS.createRectangleActor(360, 1100+700, 626, 304)
+text = AJS.createRectangleActor(360, 1100 + 700, 626, 304)
 .setTexture("text").setLayer(6);
 
 // Assemble watch

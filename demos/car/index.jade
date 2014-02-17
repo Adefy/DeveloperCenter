@@ -1,0 +1,72 @@
+h1 Concrete-Proof Car
+h3 ADD A DESCRIPTION
+
+h5 Introduction
+
+p ERMAGERD
+
+hr
+
+.row
+  .col3
+    h3 Scene Code
+  .col3.push5.right
+    .dropdown 
+      button
+        | Change theme
+        i.ss-dropdown.tiny.right
+      ul
+        li.editor-light Tomorrow
+        li.editor-dark Tomorrow Night
+.row
+  .col6
+    ul.tabs
+      li: a(href="javascript:void(0)")
+        i.ss-replay
+        | Revert changes
+      li: a#reload-ad(href="javascript:void(0)")
+        i.ss-hdd
+        | Apply changes
+    #editor-logic.editor(style="height: 640px")
+  .col4.push6
+    .preview-landscape#car-demo
+    .downloads
+      h5 Download demo
+      .col6
+        a(href="#")
+          i.ss-download
+          | PC version via HTML5
+      .col6.push6
+        a(href="https://play.google.com/store/apps/details?id=com.sit.adefy.showcase" target="_blank")
+          i.ss-download
+          | Android Showcase
+
+.row
+  .col3
+    h3 Manifest
+
+.row
+  .col6
+    ul.tabs
+      li: a(href="javascript:void(0)")
+        i.ss-replay
+        | Revert changes
+      li: a.reload-ad(href="javascript:void(0)")
+        i.ss-hdd
+        | Apply changes
+    #editor-manifest.editor(style="height: 320px")
+
+script.
+  var sampleOptions = {
+    logic: "/demos/car/ad.js",
+    manifest: "/demos/car/manifest.js",
+    adEditor: "editor-logic",
+    manifestEditor: "editor-manifest",
+    parentDiv: "#car-demo",
+    width: 1920,
+    height: 1080
+  }
+
+  loadPhoneSample(sampleOptions, function(reload) {
+    $(".reload-ad").click(function() { reload(); });
+  });

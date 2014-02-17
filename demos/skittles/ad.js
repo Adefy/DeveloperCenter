@@ -117,31 +117,36 @@ function makeItSkittle()  {
         if(skittleColour == 0)  {
           rotation = Math.floor(Math.random() * 6) + 120
           skittles.rotate(rotation, 100, 0);
-          AJS.createCircleActor(px, py, 10).setPhysicsLayer(Math.floor(Math.random() * 2) + 1)
+          AJS.createCircleActor(px, py, 10)
+          .setPhysicsLayer(Math.floor(Math.random() * 2) + 1)
           .setLayer(3).enablePsyx(1, 0.5, 0.6).attachTexture("red", 20, 20);
         }
         if(skittleColour == 1)  {
           rotation = Math.floor(Math.random() * 6) + 120
           skittles.rotate(rotation, 100, 0);
-          AJS.createCircleActor(px, py, 10).setPhysicsLayer(Math.floor(Math.random() * 2) + 1)
+          AJS.createCircleActor(px, py, 10)
+          .setPhysicsLayer(Math.floor(Math.random() * 2) + 1)
           .setLayer(3).enablePsyx(1, 0.5, 0.6).attachTexture("orange", 20, 20);
         }
         if(skittleColour == 2)  {
           rotation = Math.floor(Math.random() * 6) + 120
           skittles.rotate(rotation, 100, 0);
-          AJS.createCircleActor(px, py, 10).setPhysicsLayer(Math.floor(Math.random() * 2) + 1)
+          AJS.createCircleActor(px, py, 10)
+          .setPhysicsLayer(Math.floor(Math.random() * 2) + 1)
           .setLayer(3).enablePsyx(1, 0.5, 0.6).attachTexture("purple", 20, 20);
         }
         if(skittleColour == 3)  {
           rotation = Math.floor(Math.random() * 6) + 120
           skittles.rotate(rotation, 100, 0);
-          AJS.createCircleActor(px, py, 10).setPhysicsLayer(Math.floor(Math.random() * 2) + 1)
+          AJS.createCircleActor(px, py, 10)
+          .setPhysicsLayer(Math.floor(Math.random() * 2) + 1)
          .setLayer(3).enablePsyx(1, 0.5, 0.6) .attachTexture("green", 20, 20);
         }
         if(skittleColour == 4)  {
           rotation = Math.floor(Math.random() * 6) + 120
           skittles.rotate(rotation, 100, 0);
-          AJS.createCircleActor(px, py, 10).setPhysicsLayer(Math.floor(Math.random() * 2) + 1)
+          AJS.createCircleActor(px, py, 10)
+          .setPhysicsLayer(Math.floor(Math.random() * 2) + 1)
           .setLayer(3).enablePsyx(1, 0.5, 0.6).attachTexture("yellow", 20, 20);
         }
       }, time);

@@ -59,11 +59,22 @@ div.center {
 .preview {
   width: 390px;
   padding: 51px 45px;
-  background: transparent url(/img/nexus_large.png) no-repeat;
+  background: transparent url(/img/nexus_large.jpg) no-repeat;
   background-size: 100% 100%;
 
   canvas {
     width: 300px;
+  }
+}
+
+.preview-landscape {
+  width: 594px;
+  padding: 59px 92px 57px 90px;
+  background: transparent url(/img/nexus_large_landscape.jpg) no-repeat;
+  background-size: 100% 100%;
+
+  canvas {
+    width: 400px;
   }
 }
 
