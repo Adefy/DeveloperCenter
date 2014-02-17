@@ -28,6 +28,12 @@
 @import 'typography';
 @import 'layout';
 
+.breadcrumbs {
+  margin-top: -16px;
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+
 .tcenter {
   text-align: center;
 }

@@ -832,6 +832,11 @@ div.search-center {
   .method *:last-child {
     margin-bottom: 0; }
 
+.breadcrumbs {
+  margin-top: -16px;
+  margin-bottom: 32px;
+  font-size: 14px; }
+
 .tcenter {
   text-align: center; }
 
