@@ -1,4 +1,4 @@
-h1 Watch De-construction
+h1 Shapes!
 h3 ADD A DESCRIPTION
 
 h5 Introduction
@@ -29,7 +29,7 @@ hr
         | Apply changes
     #editor-logic.editor(style="height: 640px")
   .col4.push6
-    .preview#watch-demo
+    .preview-1080#shapes-demo
     .downloads
       h5 Download demo
       .col6
@@ -54,17 +54,17 @@ hr
       li: a.reload-ad(href="javascript:void(0)")
         i.ss-hdd
         | Apply changes
-    #editor-manifest.editor(style="height: 320px")
+    #editor-manifest.editor(style="height: 100px")
 
 script.
   var sampleOptions = {
-    logic: "/demos/watch/ad.js",
-    manifest: "/demos/watch/manifest.js",
+    logic: "/demos/shapes/ad.js",
+    manifest: "/demos/shapes/manifest.js",
     adEditor: "editor-logic",
     manifestEditor: "editor-manifest",
-    parentDiv: "#watch-demo",
-    width: 720,
-    height: 1280
+    parentDiv: "#shapes-demo",
+    width: 1080,
+    height: 1920
   }
 
   loadPhoneSample(sampleOptions, function(reload) {

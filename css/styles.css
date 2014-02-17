@@ -864,6 +864,14 @@ div.center {
   .preview-landscape canvas {
     width: 400px; }
 
+.preview-1080 {
+  width: 390px;
+  padding: 51px 45px;
+  background: transparent url(/img/nexus_large.jpg) no-repeat;
+  background-size: 100% 100%; }
+  .preview-1080 canvas {
+    width: 300px; }
+
 .language {
   text-align: right; }
   .language a {
