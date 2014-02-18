@@ -12,11 +12,9 @@ loadPhoneSample = (options, cb) ->
 
           adEditor = ace.edit options.adEditor
           adEditor.setValue adData
-          adEditor.gotoLine 1
 
           manifestEditor = ace.edit options.manifestEditor
           manifestEditor.setValue manifestData
-          manifestEditor.gotoLine 1
 
           reload = ->
             $(options.parentDiv).html ""
@@ -37,6 +35,9 @@ loadPhoneSample = (options, cb) ->
             )()
 
           reload()
+
+          adEditor.gotoLine 1
+          manifestEditor.gotoLine 1
 
           # Give the callback the reload method
           cb reload
