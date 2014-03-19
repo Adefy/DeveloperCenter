@@ -1,0 +1,90 @@
+.tutorial-with-demo
+  .sticky-demo
+    .preview.no-phone#watch-demo
+
+  .container
+    .content.no-pad
+      .col12
+        h1 Building the watch demo
+
+        p.inset
+          | This tutorial serves as an introduction to our AJS and GLAd platform.
+          | Relevant parts of the documentation are referenced in code sample
+          | descriptions. You can find our library documentation 
+          a(href="/docs/AJS" target="_blank") here.
+
+        h3 Managing assets: the manifest
+        p
+          | Adefy ads keep track of assets via a JSON array of texture definitions. Each definition is an object with two required keys, 
+          em path 
+          | and 
+          em name
+          | . The path is relative to the source file, and the name is what we reference the texture by in all texture related methods. Adefy takes care of loading up and managing textures in the environment at startup, and the manifest is usually generated for you.
+        .editor(style="height:300px")
+          | [{
+          |   "path": "assets/bg.png",
+          |   "name": "bg"
+          | }, {
+          |   "path": "assets/button.png",
+          |   "name": "button"
+          | }, {
+          |   "path": "assets/watch.png",
+          |   "name": "watch"
+          | }, {
+          |   "path": "assets/mechanics.png",
+          |   "name": "mechanics"
+          | }, {
+          |   "path": "assets/face3.png",
+          |   "name": "face3"
+          | }, {
+          |   "path": "assets/face2.png",
+          |   "name": "face2"
+          | }, {
+          |   "path": "assets/face1.png",
+          |   "name": "face1"
+          | }, {
+          |   "path": "assets/pointer3.png",
+          |   "name": "pointer3"
+          | }, {
+          |   "path": "assets/pointer2.png",
+          |   "name": "pointer2"
+          | }, {
+          |   "path": "assets/pointer1.png",
+          |   "name": "pointer1"
+          | }, {
+          |   "path": "assets/text.png",
+          |   "name": "text"
+          | }]
+        br
+
+        p.inset
+          | When defining a manifest to be manually included in a page hosting AJS, you'll need to save the array into a variable for later. For more details, check out our 
+          a(href="#") getting started
+          |  tutorial
+
+    br
+
+    .content.no-pad
+      .col12
+        h3 Setting things up
+        p To get started, let's set up our background and position our assets
+
+script.
+  $(document).on("ready", function() {
+    $(".editor").each(function(i, editor) {
+      var editor = ace.edit(editor);
+      editor.getSession().setMode("ace/mode/java");
+      editor.setTheme("ace/theme/tomorrow");
+      editor.setReadOnly(true);
+    });
+  });
+
+  var sampleOptions = {
+    logic: "/demos/watch/ad.js",
+    manifest: "/demos/watch/manifest.js",
+    parentDiv: "#watch-demo",
+    width: 720,
+    height: 1280
+  }
+
+  loadAd(sampleOptions);

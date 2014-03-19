@@ -72,6 +72,12 @@ div.center {
   background: transparent url(/img/nexus_large.jpg) no-repeat;
   background-size: 100% 100%;
 
+  &.no-phone {
+    background: none;
+    padding: 0;
+    width: 300px;
+  }
+
   canvas {
     width: 300px;
   }
@@ -281,5 +287,16 @@ $container_margin:  auto; // auto|px|%  //
     }
 
     .menu, .language { display: none; }
+  }
+}
+
+.tutorial-with-demo {
+  .container {
+    width: 60%;
+  }
+
+  /* Position updated by JS */
+  .sticky-demo {
+    position: fixed;
   }
 }

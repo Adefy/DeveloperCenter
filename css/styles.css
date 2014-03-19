@@ -861,6 +861,10 @@ div.center {
   padding: 51px 45px;
   background: transparent url(/img/nexus_large.jpg) no-repeat;
   background-size: 100% 100%; }
+  .preview.no-phone {
+    background: none;
+    padding: 0;
+    width: 300px; }
   .preview canvas {
     width: 300px; }
 
@@ -1057,3 +1061,9 @@ footer {
     margin-bottom: 20px; }
   footer .menu, footer .language {
     display: none; } }
+.tutorial-with-demo {
+  /* Position updated by JS */ }
+  .tutorial-with-demo .container {
+    width: 60%; }
+  .tutorial-with-demo .sticky-demo {
+    position: fixed; }
