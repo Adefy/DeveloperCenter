@@ -1,5 +1,7 @@
 var skittles, guider, anger, taste, red, blue, black, yellow;
 
+AJS.setAutoScale(width / 720, height / 1280);
+
 AJS.setClearColor(173, 216, 230);
 guiderColor = new AJSColor3 (255, 216, 230);
 

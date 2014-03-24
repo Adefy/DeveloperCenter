@@ -1,3 +1,5 @@
+AJS.setAutoScale(width / 1080, height / 1920);
+
 AJS.setClearColor(0, 153, 204);
 
 AJS.createPolygonActor(540, 960, 250, 5)

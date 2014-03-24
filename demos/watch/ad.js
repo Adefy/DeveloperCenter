@@ -1,5 +1,7 @@
 var watch, face1, face2, face3, pointer1, pointer2, pointer3, text, button, mech;
 
+AJS.setAutoScale(width / 720, height / 1280);
+
 AJS.setClearColor(0, 0, 0);
 
 AJS.createRectangleActor(360, 640, 720, 1280)

@@ -1,5 +1,7 @@
 var C1, O1, N1, C2, R1, E1, T1, E2, P1, R2, O2, O3, F1;
 
+AJS.setAutoScale(width / 1920, height / 1080);
+
 AJS.setClearColor(0, 0, 0);
 color = new AJSColor3 (0, 0, 0);
 
