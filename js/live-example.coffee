@@ -24,6 +24,9 @@ loadPhoneSample = (options, cb) ->
 
             (->
               eval """
+                var width = #{options.width};
+                var height = #{options.height};
+
                 #{manifestEditor.getSession().getValue()}
 
                 AJS.init(function() {
