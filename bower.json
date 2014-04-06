@@ -1,0 +1,22 @@
+{
+  "name": "AdefyDevCenter",
+  "version": "0.1.0",
+  "authors": [
+    "Cris Mihalache <cris@adefy.com>",
+    "Blaž Hrastnik <blaz@adefy.com>",
+    "Corey Powell <corey@adefy.com>"
+  ],
+  "license": "Closed",
+  "homepage": "https://developer.adefy.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "adefyjs": "git@github.com:Adefy/AdefyJS.git#1.0.0",
+    "adefyre": "git@github.com:Adefy/AdefyRE.git#1.0.0"
+  }
+}
